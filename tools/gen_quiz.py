@@ -6,7 +6,14 @@
 - 三个科目各自独立成池：语文 / 数学 / 英语。设置页按「学段 → 年级 → 科目」选。
 - 1–5、7–9 年级每科 8 题；六年级每科 100+ 题（数学含生成式计算题，语文/英语为原创题）。
 - 不够时由 QuizBank 在同一科目内向下回退。
-- 所有题目为原创，不摘抄教材/教辅；六年级按北师大版常见考点编排。新增题目直接改对应字典后重跑：
+- 所有题目为原创，不摘抄教材/教辅；六年级范围以教材目录为准：
+  数学按北师大版（2024 新教材）六上 9 个单元，语文按统编版六上课文目录，
+  英语按人教 PEP（2024 新教材）六上 6 个单元。数学不含圆柱/圆锥/解比例/比例尺/
+  比例的应用/正比例/反比例（「比例的认识」是六上第五单元，保留）；英语含
+  be going to，不含 will 一般将来时、现在完成时、过去进行时、条件状语从句；
+  语文不含六下课文（石灰吟、竹石、墨梅、学弈等）。六年级每道题还会写入可选
+  `unit` 字段（如「第二单元 圆」「Unit 5 Exploring space」），供遮罩显示题目来源。
+  新增题目直接改对应字典后重跑：
 
     python3 tools/gen_quiz.py
 """
@@ -74,7 +81,6 @@ MATH = {
  ("1/3 的倒数是？", ["1/3","3","0.3","3/2"], 1, "倒数相乘等于 1"),
  ("长方体长宽高为 2、3、4，表面积是多少？", ["24","26","48","52"], 3, "2×(6+8+12) = 52"),
  ("5 的平方是多少？", ["10","20","25","55"], 2, "5 × 5 = 25"),
- ("圆柱底面半径 r、高 h，体积是？", ["πr²h","2πrh","πrh","2πr²h"], 0, "圆柱体积 = 底面积 × 高"),
 ],
 7: [
  ("-3 + 5 = ?", ["-8","-2","2","8"], 2, "-3 + 5 = 2"),
@@ -164,10 +170,8 @@ CHINESE = {
  ("成语「不耻下（ ）」空缺的是？", ["问","学","看","听"], 0, "不耻下问"),
  ("“孰为汝多知乎”中的“孰”是什么意思？", ["谁","什么","怎么","哪里"], 0, "孰即“谁”"),
  ("《红楼梦》的作者是？", ["曹雪芹","罗贯中","吴承恩","施耐庵"], 0, "曹雪芹写《红楼梦》"),
- ("“通国之善弈者也”中的“善”是什么意思？", ["善良","擅长","喜欢","经常"], 1, "善弈即擅长下棋"),
  ("成语「舍近求（ ）」空缺的是？", ["远","近","易","难"], 0, "舍近求远"),
  ("形容一个人说话算数，用哪个成语？", ["一诺千金","一言不发","一鸣惊人","一举两得"], 0, "一诺千金指承诺值千金"),
- ("“粉骨碎身浑不怕”写的是什么？", ["石灰","梅花","竹子","菊花"], 0, "于谦《石灰吟》"),
 ],
 7: [
  ("“学而时习之”中的“时”是什么意思？", ["时间","按时","时常","当时"], 1, "时习即按时温习"),
@@ -375,9 +379,6 @@ CHINESE[6] += [
     ("“这本书（ ）我的，（ ）他的。”应填？", ["不是……而是……", "不但……而且……", "只有……才……", "即使……也……"], 0, "并列关系，用“不是……而是……”"),
     ("“（ ）天气很冷，（ ）他仍然坚持锻炼。”应填？", ["虽然……但是……", "因为……所以……", "只有……才……", "如果……就……"], 0, "转折关系，用“虽然……但是……”"),
     ("“（ ）多读多写，作文（ ）会进步。”应填？", ["只要……就……", "虽然……但是……", "即使……也……", "不是……而是……"], 0, "条件关系，用“只要……就……”"),
-    ("“千锤万凿出深山，烈火焚烧若等闲。”写的是什么？", ["石灰", "竹子", "梅花", "菊花"], 0, "于谦《石灰吟》写石灰"),
-    ("“千磨万击还坚劲，任尔东西南北风。”写的是什么？", ["竹子", "石灰", "梅花", "松树"], 0, "郑燮《竹石》写竹子"),
-    ("“不要人夸好颜色，只留清气满乾坤。”写的是什么？", ["梅花", "竹子", "菊花", "荷花"], 0, "王冕《墨梅》写梅花"),
     ("“谁言寸草心，报得三春晖。”表达的是什么？", ["母爱", "友情", "爱国", "思乡"], 0, "孟郊《游子吟》表达母爱"),
     ("“海内存知己，天涯若比邻。”的作者是？", ["王勃", "李白", "杜甫", "苏轼"], 0, "王勃《送杜少府之任蜀州》"),
     ("“但愿人长久，千里共婵娟。”的作者是？", ["苏轼", "李白", "王维", "白居易"], 0, "苏轼《水调歌头》"),
@@ -392,12 +393,8 @@ CHINESE[6] += [
     ("“随风潜入夜，润物细无声。”写的是什么？", ["春雨", "夏雨", "秋风", "冬雪"], 0, "杜甫《春夜喜雨》写春雨"),
     ("《西游记》中孙悟空的兵器是？", ["金箍棒", "九齿钉耙", "月牙铲", "方天画戟"], 0, "如意金箍棒"),
     ("《水浒传》中梁山好汉共有多少位？", ["108 位", "100 位", "72 位", "36 位"], 0, "一百单八将"),
-    ("《童年》的作者是？", ["高尔基", "列夫·托尔斯泰", "安徒生", "笛福"], 0, "高尔基自传体小说《童年》"),
-    ("《鲁滨逊漂流记》的作者是？", ["笛福", "马克·吐温", "高尔基", "安徒生"], 0, "英国作家笛福"),
-    ("《汤姆·索亚历险记》的作者是？", ["马克·吐温", "笛福", "高尔基", "安徒生"], 0, "美国作家马克·吐温"),
     ("安徒生是哪个国家的童话作家？", ["丹麦", "英国", "法国", "德国"], 0, "安徒生是丹麦童话作家"),
     ("鲁迅的原名是？", ["周树人", "周作人", "周建人", "胡适"], 0, "鲁迅原名周树人"),
-    ("《朝花夕拾》是鲁迅的什么集？", ["散文集", "小说集", "诗集", "杂文集"], 0, "《朝花夕拾》是散文集"),
     ("“横眉冷对千夫指，俯首甘为孺子牛。”的作者是？", ["鲁迅", "郭沫若", "茅盾", "巴金"], 0, "鲁迅《自嘲》"),
     ("《穷人》的作者是？", ["列夫·托尔斯泰", "高尔基", "安徒生", "马克·吐温"], 0, "俄国作家列夫·托尔斯泰"),
     ("一（ ）军舰，括号里用什么量词？", ["艘", "匹", "棵", "幅"], 0, "军舰用“艘”"),
@@ -410,6 +407,38 @@ CHINESE[6] += [
     ("“凸”字有几笔？", ["5 笔", "4 笔", "6 笔", "7 笔"], 0, "凸是 5 笔"),
     ("“凹”字有几笔？", ["5 笔", "4 笔", "6 笔", "7 笔"], 0, "凹是 5 笔"),
     ("下面哪个词表示“看”的意思？", ["凝视", "倾听", "闻", "触摸"], 0, "凝视是集中精力地看"),
+    # 六年级上册课文（统编版目录）
+    ("《草原》的作者是？", ["老舍", "巴金", "鲁迅", "朱自清"], 0, "老舍先生写的《草原》"),
+    ("《丁香结》的作者是？", ["宗璞", "冰心", "丁玲", "杨绛"], 0, "宗璞的散文《丁香结》"),
+    ("《宿建德江》的作者是？", ["孟浩然", "李白", "杜甫", "王维"], 0, "孟浩然《宿建德江》"),
+    ("“黑云翻墨未遮山”的作者是？", ["苏轼", "辛弃疾", "陆游", "王安石"], 0, "苏轼《六月二十七日望湖楼醉书》"),
+    ("“稻花香里说丰年”的作者是？", ["辛弃疾", "苏轼", "李清照", "岳飞"], 0, "辛弃疾《西江月·夜行黄沙道中》"),
+    ("《七律·长征》的作者是？", ["毛泽东", "周恩来", "朱德", "陈毅"], 0, "毛泽东写的《七律·长征》"),
+    ("《狼牙山五壮士》中五位壮士最后？", ["跳下悬崖", "投降敌人", "被俘", "渡过大河"], 0, "五位壮士英勇跳崖"),
+    ("《开国大典》写的是哪一天？", ["1949年10月1日", "1949年7月1日", "1921年7月1日", "1945年8月15日"], 0, "中华人民共和国成立的日子"),
+    ("《我的战友邱少云》中邱少云牺牲在？", ["抗美援朝战场", "长征路上", "抗日战争", "解放战争"], 0, "抗美援朝战争中"),
+    ("《竹节人》主要写了什么？", ["童年玩竹节人的乐趣", "故宫的建筑", "宇宙生命", "红军长征"], 0, "范锡林写的童年玩具"),
+    ("《宇宙生命之谜》主要探讨？", ["地球之外是否有生命", "故宫的历史", "草原的景色", "鲁迅的童年"], 0, "探索宇宙生命"),
+    ("《故宫博物院》按什么顺序介绍故宫？", ["空间顺序", "时间顺序", "事情发展顺序", "逻辑顺序"], 0, "按中轴线由南到北"),
+    ("《桥》中的老支书在洪水来临时？", ["组织村民过桥，最后牺牲", "第一个逃走", "躲在家里", "去城里求救"], 0, "老支书舍己为人"),
+    ("《金色的鱼钩》中老班长用鱼钩？", ["钓鱼给伤员吃", "做玩具", "换钱", "当武器"], 0, "老班长钓鱼给伤病员，自己吃草根"),
+    ("《灯光》中郝副营长牺牲是为了？", ["让孩子们能在灯光下学习", "保住自己的生命", "寻找食物", "掩护战友撤退"], 0, "为了让后代过上好日子"),
+    ("《盼》的作者是？", ["铁凝", "宗璞", "老舍", "冰心"], 0, "铁凝的《盼》"),
+    ("《只有一个地球》说明地球？", ["美丽但渺小，资源有限", "无边无际", "可以随便破坏", "没有生命"], 0, "呼吁保护地球"),
+    ("《青山不老》中的老人主要在做什么？", ["植树造林", "修路", "种地", "放牧"], 0, "晋西北老人十五年植树"),
+    ("《三黑和土地》表达什么？", ["农民对土地的热爱", "对城市的向往", "对战争的厌恶", "对学习的渴望"], 0, "三黑对土地的深情"),
+    ("“九曲黄河万里沙”的作者是？", ["刘禹锡", "杜牧", "王安石", "苏轼"], 0, "刘禹锡《浪淘沙》"),
+    ("“千里莺啼绿映红”的作者是？", ["杜牧", "刘禹锡", "王安石", "辛弃疾"], 0, "杜牧《江南春》"),
+    ("“一水护田将绿绕”的作者是？", ["王安石", "杜牧", "刘禹锡", "苏轼"], 0, "王安石《书湖阴先生壁》"),
+    ("《两小儿辩日》中孔子面对争论？", ["不能决断", "偏向第一个", "偏向第二个", "大声斥责"], 0, "孔子实事求是，不能决"),
+    ("《曹冲称象》中曹冲用什么办法称象？", ["用石头代替大象", "用秤直接称", "把象杀死", "用船装水"], 0, "等量替换"),
+    ("《表里的生物》中的“我”认为表里有什么？", ["生物", "宝石", "地图", "机器"], 0, "童年好奇心"),
+    ("《他们那时候多有趣啊》是一篇？", ["科幻小说", "童话", "说明文", "诗歌"], 0, "阿西莫夫的科幻小说"),
+    ("《少年闰土》的作者是？", ["鲁迅", "老舍", "巴金", "茅盾"], 0, "鲁迅《故乡》"),
+    ("《少年闰土》中闰土讲的趣事有？", ["看瓜刺猹、雪地捕鸟", "读书写字", "放牛割草", "赶集卖菜"], 0, "闰土讲看瓜、捕鸟等新鲜事"),
+    ("《好的故事》的作者是？", ["鲁迅", "老舍", "巴金", "沈从文"], 0, "鲁迅《野草》"),
+    ("《我的伯父鲁迅先生》的作者是？", ["周晔", "鲁迅", "臧克家", "巴金"], 0, "鲁迅的侄女周晔"),
+    ("《有的人》是为纪念谁写的？", ["鲁迅", "毛泽东", "雷锋", "老舍"], 0, "臧克家纪念鲁迅"),
 ]
 
 # ---------- 六年级英语补充题（原创，按北师大版六年级常见考点编排） ----------
@@ -469,22 +498,13 @@ ENGLISH[6] += [
     ("She ___ to school every day.", ["goes", "go", "going", "went"], 0, "一般现在时，第三人称单数用 goes"),
     ("Look! They ___ football now.", ["are playing", "play", "played", "plays"], 0, "now 提示现在进行时"),
     ("We ___ to the zoo yesterday.", ["went", "go", "going", "have gone"], 0, "yesterday 提示一般过去时"),
-    ("I ___ visit my grandma tomorrow.", ["will", "did", "was", "have"], 0, "tomorrow 提示一般将来时"),
-    ("He ___ here since 2020.", ["has lived", "lived", "lives", "is living"], 0, "since 提示现在完成时"),
-    ("My mother ___ dinner when the phone rang.", ["was cooking", "cooks", "cooked", "is cooking"], 0, "when 引导的过去时间状语，用过去进行时"),
     ("Listen! Someone ___ the piano.", ["is playing", "plays", "played", "play"], 0, "Listen 提示现在进行时"),
     ("They ___ a party last Sunday.", ["had", "have", "has", "are having"], 0, "last Sunday 提示一般过去时"),
-    ("She ___ just finished her homework.", ["has", "have", "is", "was"], 0, "just 提示现在完成时，用 has"),
-    ("If it ___ tomorrow, we will stay at home.", ["rains", "rain", "rained", "is raining"], 0, "if 条件句主将从现"),
     ("He usually ___ to work by bus.", ["goes", "go", "going", "went"], 0, "usually 提示一般现在时"),
-    ("I ___ my homework at eight last night.", ["was doing", "do", "does", "have done"], 0, "过去某一时刻正在做，用过去进行时"),
-    ("We ___ each other since 2020.", ["have known", "knew", "know", "are knowing"], 0, "since 提示现在完成时"),
     ("The children ___ in the park now.", ["are running", "run", "ran", "runs"], 0, "now 提示现在进行时"),
     ("She ___ TV every evening.", ["watches", "watch", "watching", "watched"], 0, "every evening 提示一般现在时"),
-    ("They ___ to Beijing next week.", ["will go", "went", "have gone", "go"], 0, "next week 提示一般将来时"),
     ("I ___ a letter to my friend yesterday.", ["wrote", "write", "writes", "writing"], 0, "yesterday 提示一般过去时"),
     ("He ___ football after school every day.", ["plays", "play", "playing", "played"], 0, "every day 提示一般现在时"),
-    ("Look at the clouds. It ___ soon.", ["is going to rain", "rains", "rained", "rain"], 0, "soon 提示一般将来时"),
     ("My father ___ back home at six yesterday.", ["came", "comes", "come", "coming"], 0, "yesterday 提示一般过去时"),
     ("tall 的比较级是？", ["taller", "tallest", "more tall", "tallly"], 0, "tall 加 er 构成比较级"),
     ("big 的比较级是？", ["bigger", "biger", "biggest", "more big"], 0, "big 双写 g 再加 er"),
@@ -546,7 +566,6 @@ ENGLISH[6] += [
     ("They ___ to the park last Sunday.", ["went", "go", "going", "have gone"], 0, "last Sunday 提示一般过去时"),
     ("She is ___ than her sister.", ["taller", "tall", "tallest", "more tall"], 0, "than 前用比较级"),
     ("This is the ___ film I have ever seen.", ["best", "better", "good", "most good"], 0, "最高级前有 the，用 best"),
-    ("He has ___ finished his homework.", ["already", "yet", "ever", "never"], 0, "肯定句用 already"),
     ("She is interested ___ music.", ["in", "on", "at", "for"], 0, "be interested in 表示对……感兴趣"),
     ("We should keep our classroom ___.", ["clean", "cleanly", "cleaning", "cleaned"], 0, "keep + 宾语 + 形容词"),
     ("The Great Wall is one of the ___ places in the world.", ["most famous", "more famous", "famous", "much famous"], 0, "one of the + 最高级"),
@@ -583,9 +602,7 @@ ENGLISH[6] += [
     ("It was raining, ___ we stayed at home.", ["so", "but", "or", "because"], 0, "因果结果用 so"),
     ("You can have tea ___ coffee.", ["or", "and", "but", "so"], 0, "选择用 or"),
     ("I didn't go to school ___ I was ill.", ["because", "so", "but", "or"], 0, "原因用 because"),
-    ("___ it rains, we will not go.", ["If", "Although", "Because", "So"], 0, "条件用 If"),
-    ("___ he is young, he knows a lot.", ["Although", "Because", "If", "So"], 0, "让步用 Although"),
-    ("I will call you ___ I arrive.", ["when", "but", "or", "because"], 0, "时间用 when"),
+    ("Call me ___ you arrive.", ["when", "but", "or", "because"], 0, "时间用 when"),
     ("She is kind ___ helpful.", ["and", "but", "or", "so"], 0, "并列用 and"),
     ("How ___ milk do you want?", ["much", "many", "long", "old"], 0, "milk 不可数，用 much"),
     ("How ___ eggs are there?", ["many", "much", "long", "old"], 0, "eggs 可数，用 many"),
@@ -593,6 +610,42 @@ ENGLISH[6] += [
     ("There are many ___ on the tree.", ["apples", "water", "milk", "bread"], 0, "apples 可数复数"),
     ("I need ___ information.", ["some", "many", "a", "an"], 0, "information 不可数，用 some"),
     ("We have ___ money.", ["some", "many", "a", "an"], 0, "money 不可数，用 some"),
+    # 2024 新版人教 PEP 六上：六个单元
+    ("How was your weekend?", ["It was great.", "I'm fine.", "It's sunny.", "By bus."], 0, "问周末过得怎样"),
+    ("Where did you go last weekend?", ["I went to the park.", "I go to the park.", "I am in the park.", "I like the park."], 0, "last weekend 用过去式"),
+    ("What did you do there?", ["I took photos.", "I take photos.", "I am taking photos.", "I like photos."], 0, "did 提问，动词用过去式"),
+    ("Did you visit the museum?", ["Yes, I did.", "Yes, I do.", "Yes, I am.", "Yes, I can."], 0, "Did 提问用 did 回答"),
+    ("What did you like about the trip?", ["The beautiful views.", "I'm fine.", "It's Monday.", "By train."], 0, "问旅行中喜欢什么"),
+    ("We ___ a great time at the party yesterday.", ["had", "have", "has", "are having"], 0, "yesterday 用过去式 had"),
+    ("She ___ to the Great Wall last year.", ["went", "goes", "go", "is going"], 0, "last year 用过去式 went"),
+    ("I ___ going to visit my grandparents tomorrow.", ["am", "is", "are", "be"], 0, "I 与 am 连用"),
+    ("She ___ going to buy a gift for her friend.", ["is", "am", "are", "be"], 0, "she 与 is 连用"),
+    ("They ___ going to have a party this weekend.", ["are", "is", "am", "be"], 0, "they 与 are 连用"),
+    ("How are you going to spend your pocket money?", ["I'm going to buy some books.", "I'm fine.", "It's sunny.", "By bus."], 0, "问打算怎样花零花钱"),
+    ("What are you going to do this weekend?", ["I'm going to play football.", "I'm fine.", "It's Monday.", "I'm from China."], 0, "be going to 表示计划"),
+    ("We are going to ___ a picnic tomorrow.", ["have", "has", "had", "having"], 0, "be going to 后接动词原形"),
+    ("You should ___ more vegetables.", ["eat", "eats", "eating", "ate"], 0, "should 后接动词原形"),
+    ("We should ___ exercise every day.", ["do", "does", "doing", "did"], 0, "should 后接动词原形"),
+    ("You shouldn't ___ too much junk food.", ["eat", "eats", "eating", "ate"], 0, "shouldn't 后接动词原形"),
+    ("To keep healthy, we should ___ early.", ["go to bed", "goes to bed", "going to bed", "went to bed"], 0, "should 后接动词原形"),
+    ("“pocket money”是什么意思？", ["零花钱", "压岁钱", "奖学金", "工资"], 0, "pocket money 指零花钱"),
+    ("“save money”是什么意思？", ["存钱", "花钱", "借钱", "数钱"], 0, "save money 指存钱"),
+    ("I want to ___ some money to buy a gift.", ["save", "spend", "borrow", "waste"], 0, "为了买礼物要存钱"),
+    ("This book is too ___. I don't have enough money.", ["expensive", "cheap", "healthy", "amazing"], 0, "钱不够说明书太贵"),
+    ("The Earth ___ around the Sun.", ["travels", "travel", "travelled", "travelling"], 0, "客观事实用一般现在时"),
+    ("There ___ a park near my home.", ["is", "are", "be", "am"], 0, "a park 是单数，用 is"),
+    ("Which planet do we live on?", ["Earth", "Mars", "Mercury", "Jupiter"], 0, "我们住在地球上"),
+    ("“spaceship”是什么意思？", ["宇宙飞船", "火车", "汽车", "轮船"], 0, "spaceship 指宇宙飞船"),
+    ("We should ___ energy.", ["save", "saves", "saving", "saved"], 0, "should 后接动词原形"),
+    ("We can ___ paper and bottles.", ["recycle", "spend", "celebrate", "travel"], 0, "recycle 表示回收利用"),
+    ("We shouldn't ___ the environment.", ["pollute", "protect", "save", "recycle"], 0, "pollute 表示污染"),
+    ("“energy”是什么意思？", ["能源", "金钱", "健康", "太空"], 0, "energy 指能源"),
+    ("“landmark”是什么意思？", ["地标", "货币", "能源", "节日"], 0, "landmark 指地标"),
+    ("“amazing”是什么意思？", ["令人惊叹的", "危险的", "便宜的", "健康的"], 0, "amazing 指令人惊叹的"),
+    ("“festival”是什么意思？", ["节日", "比赛", "博物馆", "太空"], 0, "festival 指节日"),
+    ("“celebrate”是什么意思？", ["庆祝", "参观", "节省", "锻炼"], 0, "celebrate 指庆祝"),
+    ("“healthy”是什么意思？", ["健康的", "富有的", "危险的", "著名的"], 0, "healthy 指健康的"),
+    ("“money”是什么意思？", ["钱", "时间", "健康", "食物"], 0, "money 指钱"),
 ]
 
 # ---------- 六年级数学补充题（生成式，按北师大版六年级常见考点编排） ----------
@@ -732,57 +785,100 @@ def _grade6_math_extra():
         _m6("甲:乙 = 5:7，乙是 21，甲是多少？", 15, [14, 25, 35], "21 ÷ 7 × 5 = 15"),
         _m6("男生和女生人数的比是 4:5，全班 45 人，男生有多少人？", 20, [25, 24, 16], "总份数 9，每份 5 人，男生 4 份 = 20 人"),
     ]
-    # 比例
+    # 上册补充：圆、分数、百分数、比、统计
+    # 下册的圆柱/圆锥/比例/正比例反比例不进入题库：六年级上学期还没学。
     out += [
-        _m6("解比例：3:4 = x:12，x = ?", 9, [8, 16, 6], "4x = 3 × 12，x = 9"),
-        _m6("解比例：5:8 = 10:x，x = ?", 16, [12, 20, 8], "5x = 8 × 10，x = 16"),
-        _m6("解比例：x:6 = 2:3，x = ?", 4, [3, 9, 12], "3x = 6 × 2，x = 4"),
-        _m6("解比例：7:x = 14:6，x = ?", 3, [2, 6, 12], "14x = 7 × 6，x = 3"),
-        _m6("如果 2a = 3b，那么 a:b = ?", "3:2", ["2:3", "1:1", "6:1"], "内项积等于外项积，a:b = 3:2"),
-        _m6("如果 a:b = 4:5，b:c = 5:6，那么 a:c = ?", "4:6", ["4:5", "5:6", "6:4"], "b 相同，a:c = 4:6"),
-        _m6("比例尺 1:100000，图上 3 厘米表示实际多少千米？", 3, [30, 300, 0.3], "3 × 100000 厘米 = 300000 厘米 = 3 千米"),
-        _m6("比例尺 1:5000，图上 2 厘米表示实际多少米？", 100, [10, 1000, 50], "2 × 5000 厘米 = 10000 厘米 = 100 米"),
-        _m6("比例尺 1:2000000，实际 40 千米在图上应画多少厘米？", 2, [4, 20, 0.2], "40 千米 = 4000000 厘米，4000000 ÷ 2000000 = 2 厘米"),
+        _m6("半径 7 厘米的圆，周长是多少厘米？（π 取 3.14）", 43.96,
+            [21.98, 153.86, 49.96], "C = 2πr = 2 × 3.14 × 7 = 43.96 厘米"),
+        _m6("直径 14 厘米的圆，面积是多少平方厘米？（π 取 3.14）", 153.86,
+            [43.96, 615.44, 21.98], "r = 7 厘米，S = πr² = 3.14 × 49 = 153.86 平方厘米"),
+        _m6("圆的半径扩大到原来的 2 倍，周长扩大到原来的几倍？", "2 倍",
+            ["4 倍", "8 倍", "不变"], "周长 C = 2πr，与半径成正比"),
+        _m6("圆的半径扩大到原来的 2 倍，面积扩大到原来的几倍？", "4 倍",
+            ["2 倍", "8 倍", "不变"], "面积 S = πr²，半径乘 2，面积乘 4"),
+        _m6("圆的周长是 12.56 厘米，半径是多少厘米？（π 取 3.14）", 2,
+            [4, 6.28, 1], "r = C ÷ (2π) = 12.56 ÷ 6.28 = 2 厘米"),
+        _m6("圆的面积是 78.5 平方厘米，半径是多少厘米？（π 取 3.14）", 5,
+            [10, 25, 2.5], "r² = 78.5 ÷ 3.14 = 25，r = 5 厘米"),
+        _m6("60 的 25% 是多少？", 15, [25, 12, 30], "60 × 25% = 60 × 0.25 = 15"),
+        _m6("80 比 50 多百分之几？", "60%", ["30%", "37.5%", "160%"],
+            "(80 - 50) ÷ 50 = 30 ÷ 50 = 60%"),
+        _m6("一件商品原价 400 元，现价 320 元，打了几折？", "八折",
+            ["七折", "七五折", "九折"], "320 ÷ 400 = 80%，即八折"),
+        _m6("化简比 24:36 = ?", "2:3", ["3:2", "4:6", "6:9"], "前后项同时除以 12"),
+        _m6("把 90 按 4:5 分成两部分，较大的一部分是多少？", 50,
+            [40, 45, 54], "总份数 9，每份 10，较大的是 5 份 = 50"),
+        _m6("扇形统计图中，25% 对应的圆心角是多少度？", 90,
+            [25, 180, 360], "整个圆 360°，360° × 25% = 90°"),
     ]
-    # 正比例/反比例
     out += [
-        _m6("速度一定，路程和时间成什么比例？", "正比例", ["反比例", "不成比例", "无法确定"], "路程 ÷ 时间 = 速度（一定），成正比例"),
-        _m6("路程一定，速度和时间成什么比例？", "反比例", ["正比例", "不成比例", "无法确定"], "速度 × 时间 = 路程（一定），成反比例"),
-        _m6("单价一定，总价和数量成什么比例？", "正比例", ["反比例", "不成比例", "无法确定"], "总价 ÷ 数量 = 单价（一定），成正比例"),
-        _m6("工作总量一定，工作效率和时间成什么比例？", "反比例", ["正比例", "不成比例", "无法确定"], "效率 × 时间 = 总量（一定），成反比例"),
-        _m6("圆的周长和直径成什么比例？", "正比例", ["反比例", "不成比例", "无法确定"], "周长 ÷ 直径 = π（一定），成正比例"),
-        _m6("圆的面积和半径成什么比例？", "不成比例", ["正比例", "反比例", "无法确定"], "面积 ÷ 半径 = πr，比值不一定"),
-        _m6("正方形的周长和边长成什么比例？", "正比例", ["反比例", "不成比例", "无法确定"], "周长 ÷ 边长 = 4（一定）"),
-        _m6("长方形的面积一定，长和宽成什么比例？", "反比例", ["正比例", "不成比例", "无法确定"], "长 × 宽 = 面积（一定）"),
-        _m6("除数一定，被除数和商成什么比例？", "正比例", ["反比例", "不成比例", "无法确定"], "被除数 ÷ 商 = 除数（一定）"),
+        _m6f("2/3 + 1/6 = ?", Fraction(5, 6),
+             [Fraction(3, 9), Fraction(1, 2), Fraction(4, 6)],
+             "通分：4/6 + 1/6 = 5/6"),
+        _m6f("5/8 - 1/4 = ?", Fraction(3, 8),
+             [Fraction(1, 2), Fraction(7, 8), Fraction(3, 4)],
+             "通分：5/8 - 2/8 = 3/8"),
+        _m6f("2/3 × 9/10 = ?", Fraction(3, 5),
+             [Fraction(2, 5), Fraction(5, 6), Fraction(9, 20)],
+             "约分后 2/3 × 9/10 = 3/5"),
+        _m6f("4/5 ÷ 2 = ?", Fraction(2, 5),
+             [Fraction(8, 5), Fraction(4, 3), Fraction(1, 10)],
+             "4/5 ÷ 2 = 4/5 × 1/2 = 2/5"),
     ]
-    # 圆柱
-    for r, h in [(2, 5), (3, 4), (4, 10), (5, 6)]:
-        lateral = 2 * PI * r * h
-        volume = PI * r * r * h
-        surface = lateral + 2 * PI * r * r
-        out.append(_m6(
-            "圆柱底面半径 %d 厘米、高 %d 厘米，侧面积是多少平方厘米？（π 取 3.14）" % (r, h),
-            lateral, [PI * r * h, PI * r * r * h, PI * r * r, 2 * PI * r * (r + h)],
-            "侧面积 = 2πrh = 2 × 3.14 × %d × %d = %s" % (r, h, _fmt_num(lateral))))
-        out.append(_m6(
-            "圆柱底面半径 %d 厘米、高 %d 厘米，体积是多少立方厘米？（π 取 3.14）" % (r, h),
-            volume, [lateral, PI * r * r, PI * r * h, PI * r * r * h / 3],
-            "V = πr²h = 3.14 × %d² × %d = %s" % (r, h, _fmt_num(volume))))
-        out.append(_m6(
-            "圆柱底面半径 %d 厘米、高 %d 厘米，表面积是多少平方厘米？（π 取 3.14）" % (r, h),
-            surface, [lateral, volume, 2 * PI * r * r, PI * r * r],
-            "表面积 = 侧面积 + 两个底面积 = %s + %s = %s"
-            % (_fmt_num(lateral), _fmt_num(2 * PI * r * r), _fmt_num(surface))))
-    # 圆锥
-    for r, h in [(3, 4), (6, 5), (2, 9), (4, 6)]:
-        cone = PI * r * r * h / 3.0
-        cylinder = PI * r * r * h
-        out.append(_m6(
-            "圆锥底面半径 %d 厘米、高 %d 厘米，体积是多少立方厘米？（π 取 3.14）" % (r, h),
-            cone, [cylinder, cylinder / 2, PI * r * r, PI * r * h],
-            "V = 1/3 × πr²h = 1/3 × 3.14 × %d² × %d = %s"
-            % (r, h, _fmt_num(cone))))
+    # 比例的认识（2024 新教材六上第五单元《比的认识》第 4 节）
+    # 只考“表示两个比相等的式子”和内外项；解比例/比例尺/比例的应用在六下，不进来。
+    out += [
+        _m6("表示两个比相等的式子叫做什么？", "比例",
+            ["比值", "比", "分数"], "表示两个比相等的式子叫比例"),
+        _m6("下面哪一组比能组成比例？", "6:8 和 3:4",
+            ["2:3 和 3:2", "4:5 和 5:4", "1:2 和 1:3"],
+            "6:8 = 3:4，比值都是 3/4"),
+        _m6("在比例 3:4 = 6:8 中，3 和 8 是比例的什么项？", "外项",
+            ["内项", "前项", "后项"], "两端的两项叫外项，3 和 8 是外项"),
+        _m6("在比例 2:5 = 4:10 中，5 和 4 是比例的什么项？", "内项",
+            ["外项", "前项", "后项"], "中间的两项叫内项，5 和 4 是内项"),
+        _m6("比例 4:6 = 2:3 中，两个外项的积是多少？", 12,
+            [8, 18, 6], "外项是 4 和 3，4 × 3 = 12"),
+        _m6("比例 3:5 = 9:15 中，两个内项的积是多少？", 45,
+            [15, 27, 75], "内项是 5 和 9，5 × 9 = 45"),
+        _m6("比的前项和后项同时乘或除以相同的数（0 除外），比值会怎样？", "不变",
+            ["变大", "变小", "无法确定"], "这是比的基本性质，比值不变"),
+    ]
+    # 第三单元 用字母表示（二）
+    out += [
+        _m6("用字母表示：一个数的 3 倍与 5 的和是？", "3a+5",
+            ["3(a+5)", "a+15", "5a+3"], "3 倍是 3a，再加 5 得 3a+5"),
+        _m6("当 a=4 时，2a+3 的值是？", 11, [8, 14, 24], "2 × 4 + 3 = 11"),
+        _m6("化简 3x+2x = ?", "5x", ["6x", "5x²", "x"], "同类项合并：3x + 2x = 5x"),
+        _m6("长方形的长是 a、宽是 b，周长是？", "2(a+b)",
+            ["a+b", "ab", "2ab"], "周长 = 2 × (长 + 宽) = 2(a+b)"),
+        _m6("一辆汽车每小时行 v 千米，3 小时行多少千米？", "3v",
+            ["v+3", "v/3", "3/v"], "路程 = 速度 × 时间 = 3v"),
+        _m6("日历中某天是 x 号，后一天是？", "x+1",
+            ["x-1", "2x", "x/2"], "相邻两天相差 1，后一天是 x+1"),
+    ]
+    # 第六单元 确定位置
+    out += [
+        _m6("数对 (3,5) 表示第几列第几行？", "第3列第5行",
+            ["第5列第3行", "第3行第5列", "第5行第3列"], "数对先写列、后写行"),
+        _m6("小明坐在第 2 列第 6 行，用数对表示是？", "(2,6)",
+            ["(6,2)", "(2,2)", "(6,6)"], "先列后行：第 2 列第 6 行是 (2,6)"),
+        _m6("数对 (4,2) 中的 4 表示什么？", "列",
+            ["行", "方向", "距离"], "数对第一个数表示列"),
+        _m6("北偏东 30° 表示从北方向东偏转多少度？", 30,
+            [60, 90, 150], "北偏东 30° 就是由北向东偏 30°"),
+    ]
+    # 第八单元 观察物体（二）
+    out += [
+        _m6("从正面观察一个正方体，看到的形状是？", "正方形",
+            ["长方形", "三角形", "圆"], "正方体每个面都是正方形"),
+        _m6("从不同方向观察长方体，最多能同时看到几个面？", "3 个",
+            ["1 个", "2 个", "6 个"], "从一个角观察最多同时看到 3 个面"),
+        _m6("从上面观察一个正方体，看到的形状是？", "正方形",
+            ["长方形", "三角形", "圆"], "正方体从任何方向看都是正方形"),
+        _m6("从不同方向观察同一物体，看到的形状可能？", "不同",
+            ["都相同", "都是圆", "无法确定"], "观察方向不同，看到的形状可能不同"),
+    ]
     # 统计
     out += [
         _m6("数据 2、4、4、6、9 的平均数是多少？", 5, [4, 6, 4.5], "(2+4+4+6+9) ÷ 5 = 25 ÷ 5 = 5"),
@@ -816,6 +912,89 @@ SUBJECTS = [("math", "数学", MATH), ("chinese", "语文", CHINESE), ("english"
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "app", "src", "main", "assets", "quiz")
 
+# 六年级题库只收北师大版上册内容；这些下册关键词一旦回到题干就让生成失败。
+FORBIDDEN_G6 = {
+    "math": ("圆柱", "圆锥", "解比例", "比例尺", "比例的应用", "正比例", "反比例",
+             "图形的放大", "图形的缩小"),
+    "chinese": ("童年", "鲁滨逊", "汤姆", "朝花夕拾", "石灰吟", "竹石", "墨梅", "学弈"),
+    "english": ("since", "just finished", "was cooking", "was doing", "will ", "If it", "Although"),
+}
+
+
+def _unit_math(stem):
+    s = stem
+    if any(k in s for k in ("统计图", "平均数", "中位数", "众数", "数据", "扇形", "折线", "分段")):
+        return "第九单元 数据的表示和分析（三）"
+    if any(k in s for k in ("观察", "正面", "上面", "左面")):
+        return "第八单元 观察物体（二）"
+    if any(k in s for k in ("数对", "北偏东", "北偏西", "南偏东", "南偏西")):
+        return "第六单元 确定位置"
+    if any(k in s for k in ("字母", "3a", "2a", "3x", "2x", "5x", " a", "v 千米", "x 号", "x+1")):
+        return "第三单元 用字母表示（二）"
+    if any(k in s for k in ("比例", "外项", "内项", "化简比", "比值", "前项", "甲:乙", "两个比", "比相等")):
+        return "第五单元 比的认识"
+    if ("男生" in s and "女生" in s) or ("按" in s and ":" in s):
+        return "第五单元 比的认识"
+    if any(k in s for k in ("百分", "%", "折扣", "税率", "利息", "原价", "现价", "八折", "几折")):
+        return "第七单元 百分数的认识与应用（一）"
+    if any(k in s for k in ("半径", "直径", "圆", "π")):
+        return "第二单元 圆"
+    if any(k in s for k in ("一本书", "绳子", "工程", "页", "汽车", "速度")):
+        return "第四单元 分数的应用"
+    if "÷" in s or "倒数" in s:
+        return "第一单元 分数除法"
+    if any(k in s for k in ("/", "分数", "通分", "约分")):
+        return "复习（五年级）"
+    if any(k in s for k in ("表面积", "平方")):
+        return "复习（五年级）"
+    return "综合复习"
+
+
+def _unit_chinese(stem):
+    groups = (
+        ("第一单元", ("草原", "丁香结", "宿建德江", "黑云翻墨", "稻花香里")),
+        ("第二单元", ("长征", "狼牙山", "开国大典", "邱少云")),
+        ("第三单元", ("竹节人", "宇宙生命", "故宫")),
+        ("第四单元", ("桥", "穷人", "金色的鱼钩")),
+        ("第五单元", ("灯光", "盼")),
+        ("第六单元", ("只有一个地球", "青山不老", "三黑", "九曲黄河", "千里莺啼", "一水护田")),
+        ("第七单元", ("两小儿辩日", "孰为汝多知乎", "曹冲称象", "表里的生物", "他们那时候")),
+        ("第八单元", ("少年闰土", "好的故事", "我的伯父", "有的人", "鲁迅")),
+    )
+    for unit, keys in groups:
+        if any(k in stem for k in keys):
+            return unit
+    return "基础知识"
+
+
+def _unit_english(stem):
+    s = stem.lower()
+    if any(k in s for k in ("environment", "pollution", "pollute", "recycle", "energy", "nature")):
+        return "Unit 6 Energy, nature and us"
+    if any(k in s for k in ("space", "planet", "astronaut", "spaceship", "earth", "mercury", "jupiter", "mars", "invention", "future")):
+        return "Unit 5 Exploring space"
+    if any(k in s for k in ("pocket money", "money", "expensive", "cheap", "spend", "price", "buy a gift")):
+        return "Unit 4 Managing money well"
+    if any(k in s for k in ("healthy", "health", "exercise", "vegetable", "junk food", "should", "go to bed", "doctor", "hospital", "advice")):
+        return "Unit 3 Healthy life"
+    if any(k in s for k in ("festival", "celebrate", "party", "together", "competition", "prize", "birthday", "christmas", "december", "february")):
+        return "Unit 2 Getting together"
+    if any(k in s for k in ("amazing", "landmark", "museum", "capital", "countryside", "travel", "trip", "holiday", "journey", "library", "great wall", "famous")):
+        return "Unit 1 Amazing places"
+    if any(k in s for k in ("where did you go", "how was your weekend", "what did you do", "did you")):
+        return "Unit 1 Amazing places"
+    if "there " in s:
+        return "Unit 5 Exploring space"
+    return "语法与词汇"
+
+
+def _unit_for(key, stem):
+    if key == "math":
+        return _unit_math(stem)
+    if key == "chinese":
+        return _unit_chinese(stem)
+    return _unit_english(stem)
+
 
 def main():
     os.makedirs(OUT, exist_ok=True)
@@ -827,19 +1006,25 @@ def main():
             assert all(len(s) <= 60 for s in stems), ("题干过长", key, grade)
             if grade == 6:
                 assert len(items) >= 100, ("六年级题量不足", key, len(items))
+                for kw in FORBIDDEN_G6.get(key, ()):
+                    bad = [s for s in stems if kw.lower() in s.lower()]
+                    assert not bad, ("六年级题库混入下册内容", key, kw, bad)
             rows = []
             for i, (stem, opts, ans, exp) in enumerate(items, start=1):
                 assert len(opts) == 4, (key, grade, stem)
                 assert 0 <= ans < 4, (key, grade, stem)
                 assert len(set(opts)) == 4, ("选项重复", key, grade, stem)
-                rows.append({
+                row = {
                     "id": "%s%d-%03d" % (key[0], grade, i),
                     "subject": name,
                     "stem": stem,
                     "options": opts,
                     "answerIndex": ans,
                     "explanation": exp,
-                })
+                }
+                if grade == 6:
+                    row["unit"] = _unit_for(key, stem)
+                rows.append(row)
             doc = {"version": 2, "subject": name, "grade": grade, "items": rows}
             path = os.path.join(OUT, "%s_grade_%d.json" % (key, grade))
             with open(path, "w", encoding="utf-8") as f:

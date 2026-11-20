@@ -31,6 +31,7 @@
 | 覆盖安装 | 通过 | 通知监听授权保留 |
 | 精确闹钟 | 未测 | 本设计不依赖闹钟 |
 | 断电 | 未测 | 未做多次断电测试 |
+| Device Owner | **不支持** | `pm has-feature android.software.device_admin` → `false`；`dpm set-device-owner` → `RuntimeException: Can't set package ...`（D17） |
 
 原始输出见仓库 `evidence/D1-2026-11-10/`。
 

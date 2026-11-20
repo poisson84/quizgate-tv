@@ -1,0 +1,28 @@
+# D17 原始输出（2026-11-20 18:49:17）
+
+$ adb shell getprop ro.product.model
+MiTV-MFTR0
+$ adb shell getprop ro.build.version.release
+11
+$ adb shell getprop ro.build.display.id
+OS2.0.23.0.RFTMATV
+
+$ adb shell pm list features | grep -i device_admin
+(exit 1, 无输出)
+
+$ adb shell pm has-feature android.software.device_admin
+false
+$ adb shell pm has-feature android.software.managed_users
+false
+
+$ adb shell dpm set-device-owner app.quizgate.tv/.AdminReceiver
+java.lang.RuntimeException: Can't set package ComponentInfo{app.quizgate.tv/app.quizgate.tv.AdminReceiver} as device owner.
+	at com.android.commands.dpm.Dpm.runSetDeviceOwner(Dpm.java:204)
+	at com.android.commands.dpm.Dpm.onRun(Dpm.java:115)
+	at com.android.internal.os.BaseCommand.run(BaseCommand.java:60)
+	at com.android.commands.dpm.Dpm.main(Dpm.java:41)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:409)
+
+$ adb shell dumpsys device_policy | grep -i "Device provisioned"
+    Device provisioned: false

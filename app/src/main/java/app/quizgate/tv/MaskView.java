@@ -42,6 +42,8 @@ public class MaskView extends FrameLayout {
     private final String childName;
 
     private final TextView kickerView;
+    /** 题目来源：科目 + 教材单元；旧题库或口算兜底只显示科目。 */
+    private final TextView sourceView;
     private final TextView stemView;
     private final TextView feedback;
     private final TextView hintView;
@@ -96,10 +98,16 @@ public class MaskView extends FrameLayout {
         kickerView = Ui.label(c, childName + KICKER_SUFFIX, 20, Ui.DIM);
         box.addView(kickerView);
 
+        sourceView = Ui.label(c, "", 16, Ui.ACCENT);
+        sourceView.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams srclp = new LinearLayout.LayoutParams(-1, -2);
+        srclp.topMargin = Ui.dp(c, 8);
+        box.addView(sourceView, srclp);
+
         stemView = Ui.title(c, "", 30);
         stemView.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams slp = new LinearLayout.LayoutParams(-1, -2);
-        slp.topMargin = Ui.dp(c, 16);
+        slp.topMargin = Ui.dp(c, 10);
         box.addView(stemView, slp);
 
         for (int row = 0; row < 2; row++) {
@@ -197,10 +205,10 @@ public class MaskView extends FrameLayout {
         answering = false;
         stemView.setText(q.stem);
         for (int i = 0; i < 4; i++) opts[i].setText(q.options[i]);
-        String kicker = childName + KICKER_SUFFIX;
-        kickerView.setText(subject == Prefs.SUBJECT_MIXED
-                ? kicker + "　·　" + Prefs.SUBJECT_NAMES[subjectIdx]
-                : kicker);
+        String source = Prefs.SUBJECT_NAMES[subjectIdx];
+        if (q.unit != null && !q.unit.isEmpty()) source += " · " + q.unit;
+        sourceView.setText(source);
+        kickerView.setText(childName + KICKER_SUFFIX);
         int streak = prefs.correctStreak();
         if (streak > 0) {
             feedback.setTextColor(Ui.DIM);

@@ -30,6 +30,8 @@ public final class QuizBank {
         public String[] options = new String[]{"", "", "", ""};
         public int answer = 0;
         public String explain = "";
+        /** 可选：教材来源，例如「第二单元 圆」；旧题库/口算兜底为空。 */
+        public String unit = "";
     }
 
     private final Context ctx;
@@ -68,6 +70,7 @@ public final class QuizBank {
             out.options = src.options.clone();
             out.answer = src.answer;
             out.explain = src.explain;
+            out.unit = src.unit;
             out.answer = shuffle(out.options, out.answer, r);
             return out;
         }
@@ -81,6 +84,7 @@ public final class QuizBank {
             out.options = src.options.clone();
             out.answer = src.answer;
             out.explain = src.explain;
+            out.unit = src.unit;
             out.answer = shuffle(out.options, out.answer, r);
             return out;
         }
@@ -136,6 +140,7 @@ public final class QuizBank {
                     q.answer = o.getInt("answerIndex");
                     if (q.answer < 0 || q.answer > 3) continue;
                     q.explain = o.optString("explanation", "");
+                    q.unit = o.optString("unit", "");
                     list.add(q);
                 }
             }

@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     private ScrollView contentScroll;
     private LinearLayout content;
 
-    private TextView valueDuration, valueExtend, valueRequired, valueGrade, valueChildName, valueSchedule, valueLauncher, valuePin, valueRecovery, valueGuard;
+    private TextView valueDuration, valueExtend, valueRequired, valueGrade, valueChildName, valueSchedule, valueLauncher, valuePin, valueRecovery, valueGuard, valueOwner;
     private TextView valueVersion, valueLog;
     private TextView anchorWarn;
     /** 设置页的第一项（本次时长）。顶部返回按钮在 1.2.9 删掉后，焦点默认落在这里。 */
@@ -156,6 +156,7 @@ public class MainActivity extends Activity {
         // 1.3.0：授权自检、显示权限按钮、卸载留痕全部收进「守护状态」子页，
         // 设置页只留这一个入口。家长按进去能看到每一项的状态与修复命令。
         valueGuard = addRow("守护状态", this::showGuardPanel);
+        valueOwner = addRow("设备所有者", this::showOwnerPanel);
         valueVersion = addRow("当前版本", () -> toast(versionText()));
 
         // 顶部返回按钮删掉后，进设置页的默认焦点落在这里
@@ -893,6 +894,70 @@ public class MainActivity extends Activity {
         cancel.requestFocus();
     }
 
+    /** 设备所有者状态与 provisioning 说明。真正设置必须用 adb，不能在应用内点一下完成。 */
+    private void showOwnerPanel() {
+        final Dialog d = new Dialog(this);
+        LinearLayout box = new LinearLayout(this);
+        box.setOrientation(LinearLayout.VERTICAL);
+        box.setBackgroundResource(R.drawable.panel_bg);
+        box.setPadding(Ui.dp(this, 44), Ui.dp(this, 30), Ui.dp(this, 44), Ui.dp(this, 30));
+        box.addView(Ui.title(this, "设备所有者", 26));
+
+        boolean owner = DeviceOwner.isOwner(this);
+        boolean supported = DeviceOwner.supported(this);
+        String status = owner ? "已启用" : (supported ? "未启用" : "固件不支持");
+        TextView st = Ui.title(this, status, 24);
+        st.setTextColor(owner ? Ui.ACCENT : (supported ? Ui.DIM : Ui.BAD));
+        LinearLayout.LayoutParams slp = new LinearLayout.LayoutParams(-1, -2);
+        slp.topMargin = Ui.dp(this, 10);
+        box.addView(st, slp);
+
+        String body;
+        if (owner) {
+            body = "已阻止：\n"
+                    + "· 设置里的「恢复出厂设置」\n"
+                    + "· 卸载本应用\n"
+                    + "· 安全模式\n"
+                    + "· 修改系统时间\n\n"
+                    + "这一层不能防 Recovery 双清；小米固件也可能不支持 device owner。\n"
+                    + "撤销只能恢复出厂：dpm remove-active-admin 要求应用声明 testOnly，本应用没有声明。";
+        } else if (!supported) {
+            body = "本机固件没有声明 android.software.device_admin，dpm set-device-owner 会直接失败，\n"
+                    + "无法在这台电视上启用 Device Owner。MiTV-MFTR0 / Android 11 实测如此（D17）。\n\n"
+                    + "这台电视只能把控制点放到外面：路由器按时间段或心跳封外网、小米账号/FRP、\n"
+                    + "智能插座或物理锁。Device Owner 代码保留给支持该特性的机型。";
+        } else {
+            body = "需要一次性 provisioning，过程中会清掉电视数据：\n\n"
+                    + "1. 电视恢复出厂，设置时不登录任何账号；\n"
+                    + "2. 装好本应用，打开网络调试；\n"
+                    + "3. 电脑执行：\n"
+                    + "adb shell dpm set-device-owner app.quizgate.tv/.AdminReceiver\n\n"
+                    + "成功后这里会显示「已启用」，设置里的恢复出厂和卸载会被系统禁用。\n"
+                    + "注意：Recovery 双清仍可能绕过；固件也可能拒绝 device owner。";
+        }
+        TextView bodyView = Ui.label(this, body, 17, Ui.TEXT);
+        bodyView.setLineSpacing(0, 1.15f);
+        LinearLayout.LayoutParams blp = new LinearLayout.LayoutParams(-1, -2);
+        blp.topMargin = Ui.dp(this, 14);
+        box.addView(bodyView, blp);
+
+        TextView close = Ui.key(this, "关闭", 22);
+        close.setBackgroundResource(R.drawable.opt_bg);
+        LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(-1, Ui.dp(this, 58));
+        clp.topMargin = Ui.dp(this, 20);
+        box.addView(close, clp);
+        close.setOnClickListener(v -> d.dismiss());
+
+        d.setContentView(box);
+        if (d.getWindow() != null) {
+            d.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            android.util.DisplayMetrics dm = getResources().getDisplayMetrics();
+            d.getWindow().setLayout((int) (dm.widthPixels * 0.76f), ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
+        d.show();
+        close.requestFocus();
+    }
+
     private LinearLayout dialogRow(String label, TextView value, Runnable onClick) {
         LinearLayout r = Ui.row(this);
         r.setGravity(Gravity.CENTER_VERTICAL);
@@ -1562,6 +1627,10 @@ public class MainActivity extends Activity {
         // 只存哈希：应用里看不到已生成的码，想再看只能重新生成（旧码立即作废）
         valueRecovery.setText(!prefs.hasRecoveryCode() ? "未生成"
                 : (prefs.recoverySaved() ? "已保存" : "待拍照"));
+        if (valueOwner != null) {
+            valueOwner.setText(DeviceOwner.isOwner(this) ? "已启用（防恢复出厂）"
+                    : (!DeviceOwner.supported(this) ? "固件不支持" : "未启用"));
+        }
         valueVersion.setText(versionText());
         if (valueLog != null) {
             valueLog.setText("查看 ›");

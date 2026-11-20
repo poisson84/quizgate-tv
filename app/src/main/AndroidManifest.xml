@@ -82,6 +82,23 @@
              所以 exported="false" 也能收到；不声明的话，「签名不一致」这类失败会静默无提示。 -->
         <receiver android:name=".InstallResultReceiver" android:exported="false" />
 
+        <!-- 设备管理员 / Device Owner 入口。普通安装时只是存在，不产生任何限制；
+             被 dpm set-device-owner 设为所有者后，才由 DeviceOwner.apply 落地
+             「禁止恢复出厂 / 禁止卸载 / 禁止安全模式 / 禁止改时间」。
+             BIND_DEVICE_ADMIN 是系统绑定 receiver 用的权限，不是 uses-permission，
+             不改变 CI 的权限白名单。 -->
+        <receiver
+            android:name=".AdminReceiver"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
         <!-- 每日答题时段的当天精确闹钟（AlarmManager 显式 PendingIntent 投递，exported=false）。 -->
         <receiver android:name=".ScheduleReceiver" android:exported="false" />
 

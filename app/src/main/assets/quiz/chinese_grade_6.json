@@ -14,7 +14,8 @@
     "曹雪芹"
    ],
    "answerIndex": 0,
-   "explanation": "罗贯中写《三国演义》"
+   "explanation": "罗贯中写《三国演义》",
+   "unit": "基础知识"
   },
   {
    "id": "c6-002",
@@ -27,7 +28,8 @@
     "听"
    ],
    "answerIndex": 0,
-   "explanation": "不耻下问"
+   "explanation": "不耻下问",
+   "unit": "基础知识"
   },
   {
    "id": "c6-003",
@@ -40,7 +42,8 @@
     "哪里"
    ],
    "answerIndex": 0,
-   "explanation": "孰即“谁”"
+   "explanation": "孰即“谁”",
+   "unit": "第七单元"
   },
   {
    "id": "c6-004",
@@ -53,23 +56,11 @@
     "施耐庵"
    ],
    "answerIndex": 0,
-   "explanation": "曹雪芹写《红楼梦》"
+   "explanation": "曹雪芹写《红楼梦》",
+   "unit": "基础知识"
   },
   {
    "id": "c6-005",
-   "subject": "语文",
-   "stem": "“通国之善弈者也”中的“善”是什么意思？",
-   "options": [
-    "善良",
-    "擅长",
-    "喜欢",
-    "经常"
-   ],
-   "answerIndex": 1,
-   "explanation": "善弈即擅长下棋"
-  },
-  {
-   "id": "c6-006",
    "subject": "语文",
    "stem": "成语「舍近求（ ）」空缺的是？",
    "options": [
@@ -79,10 +70,11 @@
     "难"
    ],
    "answerIndex": 0,
-   "explanation": "舍近求远"
+   "explanation": "舍近求远",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-007",
+   "id": "c6-006",
    "subject": "语文",
    "stem": "形容一个人说话算数，用哪个成语？",
    "options": [
@@ -92,23 +84,11 @@
     "一举两得"
    ],
    "answerIndex": 0,
-   "explanation": "一诺千金指承诺值千金"
+   "explanation": "一诺千金指承诺值千金",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-008",
-   "subject": "语文",
-   "stem": "“粉骨碎身浑不怕”写的是什么？",
-   "options": [
-    "石灰",
-    "梅花",
-    "竹子",
-    "菊花"
-   ],
-   "answerIndex": 0,
-   "explanation": "于谦《石灰吟》"
-  },
-  {
-   "id": "c6-009",
+   "id": "c6-007",
    "subject": "语文",
    "stem": "“炽热”的“炽”读音是？",
    "options": [
@@ -118,10 +98,11 @@
     "chī"
    ],
    "answerIndex": 0,
-   "explanation": "炽读 chì，第四声"
+   "explanation": "炽读 chì，第四声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-010",
+   "id": "c6-008",
    "subject": "语文",
    "stem": "“憎恶”的“憎”读音是？",
    "options": [
@@ -131,10 +112,11 @@
     "zéng"
    ],
    "answerIndex": 0,
-   "explanation": "憎读 zēng，第一声"
+   "explanation": "憎读 zēng，第一声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-011",
+   "id": "c6-009",
    "subject": "语文",
    "stem": "“瞥见”的“瞥”读音是？",
    "options": [
@@ -144,10 +126,11 @@
     "piè"
    ],
    "answerIndex": 0,
-   "explanation": "瞥读 piē，第一声"
+   "explanation": "瞥读 piē，第一声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-012",
+   "id": "c6-010",
    "subject": "语文",
    "stem": "“蓦然”的“蓦”读音是？",
    "options": [
@@ -157,10 +140,11 @@
     "mú"
    ],
    "answerIndex": 0,
-   "explanation": "蓦读 mò，第四声"
+   "explanation": "蓦读 mò，第四声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-013",
+   "id": "c6-011",
    "subject": "语文",
    "stem": "“蜷缩”的“蜷”读音是？",
    "options": [
@@ -170,10 +154,11 @@
     "juàn"
    ],
    "answerIndex": 0,
-   "explanation": "蜷读 quán，第二声"
+   "explanation": "蜷读 quán，第二声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-014",
+   "id": "c6-012",
    "subject": "语文",
    "stem": "“干涸”的“涸”读音是？",
    "options": [
@@ -183,10 +168,11 @@
     "kù"
    ],
    "answerIndex": 0,
-   "explanation": "涸读 hé，第二声"
+   "explanation": "涸读 hé，第二声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-015",
+   "id": "c6-013",
    "subject": "语文",
    "stem": "“玷污”的“玷”读音是？",
    "options": [
@@ -196,10 +182,11 @@
     "diǎn"
    ],
    "answerIndex": 0,
-   "explanation": "玷读 diàn，第四声"
+   "explanation": "玷读 diàn，第四声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-016",
+   "id": "c6-014",
    "subject": "语文",
    "stem": "“挑剔”的“剔”读音是？",
    "options": [
@@ -209,10 +196,11 @@
     "dī"
    ],
    "answerIndex": 0,
-   "explanation": "剔读 tī，第一声"
+   "explanation": "剔读 tī，第一声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-017",
+   "id": "c6-015",
    "subject": "语文",
    "stem": "“哺育”的“哺”读音是？",
    "options": [
@@ -222,10 +210,11 @@
     "bù"
    ],
    "answerIndex": 0,
-   "explanation": "哺读 bǔ，第三声"
+   "explanation": "哺读 bǔ，第三声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-018",
+   "id": "c6-016",
    "subject": "语文",
    "stem": "“荫庇”的“庇”读音是？",
    "options": [
@@ -235,10 +224,11 @@
     "pī"
    ],
    "answerIndex": 0,
-   "explanation": "庇读 bì，第四声"
+   "explanation": "庇读 bì，第四声",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-019",
+   "id": "c6-017",
    "subject": "语文",
    "stem": "成语“再接再（ ）”应填？",
    "options": [
@@ -248,10 +238,11 @@
     "利"
    ],
    "answerIndex": 0,
-   "explanation": "再接再厉：一次又一次地继续努力"
+   "explanation": "再接再厉：一次又一次地继续努力",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-020",
+   "id": "c6-018",
    "subject": "语文",
    "stem": "成语“迫不（ ）待”应填？",
    "options": [
@@ -261,10 +252,11 @@
     "级"
    ],
    "answerIndex": 0,
-   "explanation": "迫不及待：急迫得不能再等待"
+   "explanation": "迫不及待：急迫得不能再等待",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-021",
+   "id": "c6-019",
    "subject": "语文",
    "stem": "成语“一如（ ）往”应填？",
    "options": [
@@ -274,10 +266,11 @@
     "记"
    ],
    "answerIndex": 0,
-   "explanation": "一如既往：完全像从前一样"
+   "explanation": "一如既往：完全像从前一样",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-022",
+   "id": "c6-020",
    "subject": "语文",
    "stem": "成语“（ ）流不息”应填？",
    "options": [
@@ -287,10 +280,11 @@
     "船"
    ],
    "answerIndex": 0,
-   "explanation": "川流不息：像河水一样连续不断"
+   "explanation": "川流不息：像河水一样连续不断",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-023",
+   "id": "c6-021",
    "subject": "语文",
    "stem": "成语“走（ ）无路”应填？",
    "options": [
@@ -300,10 +294,11 @@
     "透"
    ],
    "answerIndex": 0,
-   "explanation": "走投无路：无路可走，陷入绝境"
+   "explanation": "走投无路：无路可走，陷入绝境",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-024",
+   "id": "c6-022",
    "subject": "语文",
    "stem": "成语“（ ）竽充数”应填？",
    "options": [
@@ -313,10 +308,11 @@
     "篮"
    ],
    "answerIndex": 0,
-   "explanation": "滥竽充数：没有真才实学的人混在行家里"
+   "explanation": "滥竽充数：没有真才实学的人混在行家里",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-025",
+   "id": "c6-023",
    "subject": "语文",
    "stem": "成语“（ ）苗助长”应填？",
    "options": [
@@ -326,10 +322,11 @@
     "把"
    ],
    "answerIndex": 0,
-   "explanation": "拔苗助长：违反规律急于求成"
+   "explanation": "拔苗助长：违反规律急于求成",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-026",
+   "id": "c6-024",
    "subject": "语文",
    "stem": "成语“（ ）精会神”应填？",
    "options": [
@@ -339,10 +336,11 @@
     "俱"
    ],
    "answerIndex": 0,
-   "explanation": "聚精会神：集中精神，专心一致"
+   "explanation": "聚精会神：集中精神，专心一致",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-027",
+   "id": "c6-025",
    "subject": "语文",
    "stem": "成语“（ ）然大悟”应填？",
    "options": [
@@ -352,10 +350,11 @@
     "惶"
    ],
    "answerIndex": 0,
-   "explanation": "恍然大悟：一下子明白过来"
+   "explanation": "恍然大悟：一下子明白过来",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-028",
+   "id": "c6-026",
    "subject": "语文",
    "stem": "成语“（ ）耳盗铃”应填？",
    "options": [
@@ -365,10 +364,11 @@
     "艳"
    ],
    "answerIndex": 0,
-   "explanation": "掩耳盗铃：自己欺骗自己"
+   "explanation": "掩耳盗铃：自己欺骗自己",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-029",
+   "id": "c6-027",
    "subject": "语文",
    "stem": "“守株待兔”比喻什么？",
    "options": [
@@ -378,10 +378,11 @@
     "勤劳耕作"
    ],
    "answerIndex": 0,
-   "explanation": "守株待兔讽刺不知变通、妄想不劳而获的人"
+   "explanation": "守株待兔讽刺不知变通、妄想不劳而获的人",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-030",
+   "id": "c6-028",
    "subject": "语文",
    "stem": "“刻舟求剑”告诉我们什么？",
    "options": [
@@ -391,10 +392,11 @@
     "要珍惜时间"
    ],
    "answerIndex": 0,
-   "explanation": "事物不断变化，不能用静止的眼光看问题"
+   "explanation": "事物不断变化，不能用静止的眼光看问题",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-031",
+   "id": "c6-029",
    "subject": "语文",
    "stem": "“画蛇添足”比喻什么？",
    "options": [
@@ -404,10 +406,11 @@
     "做事要有始有终"
    ],
    "answerIndex": 0,
-   "explanation": "做了多余的事，反而把事情弄糟"
+   "explanation": "做了多余的事，反而把事情弄糟",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-032",
+   "id": "c6-030",
    "subject": "语文",
    "stem": "“掩耳盗铃”比喻什么？",
    "options": [
@@ -417,10 +420,11 @@
     "做事要隐蔽"
    ],
    "answerIndex": 0,
-   "explanation": "捂住耳朵偷铃，自欺欺人"
+   "explanation": "捂住耳朵偷铃，自欺欺人",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-033",
+   "id": "c6-031",
    "subject": "语文",
    "stem": "“井底之蛙”比喻什么？",
    "options": [
@@ -430,10 +434,11 @@
     "善于观察"
    ],
    "answerIndex": 0,
-   "explanation": "井底的青蛙只能看到井口大的天"
+   "explanation": "井底的青蛙只能看到井口大的天",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-034",
+   "id": "c6-032",
    "subject": "语文",
    "stem": "“胸有成竹”形容什么？",
    "options": [
@@ -443,10 +448,11 @@
     "做事犹豫不决"
    ],
    "answerIndex": 0,
-   "explanation": "画竹前心中已有竹子的形象"
+   "explanation": "画竹前心中已有竹子的形象",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-035",
+   "id": "c6-033",
    "subject": "语文",
    "stem": "“对牛弹琴”比喻什么？",
    "options": [
@@ -456,10 +462,11 @@
     "善于沟通"
    ],
    "answerIndex": 0,
-   "explanation": "对不懂道理的人讲道理，白费口舌"
+   "explanation": "对不懂道理的人讲道理，白费口舌",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-036",
+   "id": "c6-034",
    "subject": "语文",
    "stem": "“雪中送炭”比喻什么？",
    "options": [
@@ -469,10 +476,11 @@
     "做事不合时宜"
    ],
    "answerIndex": 0,
-   "explanation": "在别人急需时给予帮助"
+   "explanation": "在别人急需时给予帮助",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-037",
+   "id": "c6-035",
    "subject": "语文",
    "stem": "“拔苗助长”告诉我们什么？",
    "options": [
@@ -482,10 +490,11 @@
     "要善于等待"
    ],
    "answerIndex": 0,
-   "explanation": "事物发展有规律，不能急于求成"
+   "explanation": "事物发展有规律，不能急于求成",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-038",
+   "id": "c6-036",
    "subject": "语文",
    "stem": "“自相矛盾”比喻什么？",
    "options": [
@@ -495,10 +504,11 @@
     "善于辩论"
    ],
    "answerIndex": 0,
-   "explanation": "自己说的话前后抵触"
+   "explanation": "自己说的话前后抵触",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-039",
+   "id": "c6-037",
    "subject": "语文",
    "stem": "“滥竽充数”比喻什么？",
    "options": [
@@ -508,10 +518,11 @@
     "做事认真"
    ],
    "answerIndex": 0,
-   "explanation": "不会吹竽的人混在乐队里充数"
+   "explanation": "不会吹竽的人混在乐队里充数",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-040",
+   "id": "c6-038",
    "subject": "语文",
    "stem": "“画龙点睛”比喻什么？",
    "options": [
@@ -521,10 +532,11 @@
     "多加几笔更好"
    ],
    "answerIndex": 0,
-   "explanation": "在关键处加上一笔，使整体更传神"
+   "explanation": "在关键处加上一笔，使整体更传神",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-041",
+   "id": "c6-039",
    "subject": "语文",
    "stem": "“锦上添花”比喻什么？",
    "options": [
@@ -534,10 +546,11 @@
     "表面好看"
    ],
    "answerIndex": 0,
-   "explanation": "在美好的基础上再增添美好"
+   "explanation": "在美好的基础上再增添美好",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-042",
+   "id": "c6-040",
    "subject": "语文",
    "stem": "与“忽然”意思最接近的是？",
    "options": [
@@ -547,10 +560,11 @@
     "经常"
    ],
    "answerIndex": 0,
-   "explanation": "忽然和突然都表示事情发生得快"
+   "explanation": "忽然和突然都表示事情发生得快",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-043",
+   "id": "c6-041",
    "subject": "语文",
    "stem": "与“寂静”意思最接近的是？",
    "options": [
@@ -560,10 +574,11 @@
     "吵闹"
    ],
    "answerIndex": 0,
-   "explanation": "寂静和安静都表示没有声音"
+   "explanation": "寂静和安静都表示没有声音",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-044",
+   "id": "c6-042",
    "subject": "语文",
    "stem": "与“鼓励”意思最接近的是？",
    "options": [
@@ -573,10 +588,11 @@
     "阻止"
    ],
    "answerIndex": 0,
-   "explanation": "鼓励和鼓舞都有激发、支持的意思"
+   "explanation": "鼓励和鼓舞都有激发、支持的意思",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-045",
+   "id": "c6-043",
    "subject": "语文",
    "stem": "与“凝视”意思最接近的是？",
    "options": [
@@ -586,10 +602,11 @@
     "闭眼"
    ],
    "answerIndex": 0,
-   "explanation": "凝视和注视都表示集中精力地看"
+   "explanation": "凝视和注视都表示集中精力地看",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-046",
+   "id": "c6-044",
    "subject": "语文",
    "stem": "与“崎岖”意思相反的是？",
    "options": [
@@ -599,10 +616,11 @@
     "狭窄"
    ],
    "answerIndex": 0,
-   "explanation": "崎岖指高低不平，反义是平坦"
+   "explanation": "崎岖指高低不平，反义是平坦",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-047",
+   "id": "c6-045",
    "subject": "语文",
    "stem": "与“慷慨”意思相反的是？",
    "options": [
@@ -612,10 +630,11 @@
     "勇敢"
    ],
    "answerIndex": 0,
-   "explanation": "慷慨指大方，反义是吝啬"
+   "explanation": "慷慨指大方，反义是吝啬",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-048",
+   "id": "c6-046",
    "subject": "语文",
    "stem": "与“清晰”意思相反的是？",
    "options": [
@@ -625,10 +644,11 @@
     "干净"
    ],
    "answerIndex": 0,
-   "explanation": "清晰指清楚，反义是模糊"
+   "explanation": "清晰指清楚，反义是模糊",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-049",
+   "id": "c6-047",
    "subject": "语文",
    "stem": "与“熟悉”意思相反的是？",
    "options": [
@@ -638,10 +658,11 @@
     "认识"
    ],
    "answerIndex": 0,
-   "explanation": "熟悉指了解，反义是陌生"
+   "explanation": "熟悉指了解，反义是陌生",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-050",
+   "id": "c6-048",
    "subject": "语文",
    "stem": "与“崭新”意思相反的是？",
    "options": [
@@ -651,10 +672,11 @@
     "干净"
    ],
    "answerIndex": 0,
-   "explanation": "崭新指很新，反义是陈旧"
+   "explanation": "崭新指很新，反义是陈旧",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-051",
+   "id": "c6-049",
    "subject": "语文",
    "stem": "与“团结”意思相反的是？",
    "options": [
@@ -664,10 +686,11 @@
     "和睦"
    ],
    "answerIndex": 0,
-   "explanation": "团结指联合，反义是分裂"
+   "explanation": "团结指联合，反义是分裂",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-052",
+   "id": "c6-050",
    "subject": "语文",
    "stem": "“危楼高百尺，手可摘星辰。”用了什么修辞？",
    "options": [
@@ -677,10 +700,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "用“百尺”“摘星辰”夸大楼高"
+   "explanation": "用“百尺”“摘星辰”夸大楼高",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-053",
+   "id": "c6-051",
    "subject": "语文",
    "stem": "“荷叶像一把把大伞”用了什么修辞？",
    "options": [
@@ -690,10 +714,11 @@
     "反问"
    ],
    "answerIndex": 0,
-   "explanation": "把荷叶比作大伞"
+   "explanation": "把荷叶比作大伞",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-054",
+   "id": "c6-052",
    "subject": "语文",
    "stem": "“花儿在风中点头”用了什么修辞？",
    "options": [
@@ -703,10 +728,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "把花儿当作人来写"
+   "explanation": "把花儿当作人来写",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-055",
+   "id": "c6-053",
    "subject": "语文",
    "stem": "“难道我们不应该珍惜时间吗？”用了什么修辞？",
    "options": [
@@ -716,10 +742,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "用反问的形式表达肯定的意思"
+   "explanation": "用反问的形式表达肯定的意思",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-056",
+   "id": "c6-054",
    "subject": "语文",
    "stem": "“桂林的山真奇啊，桂林的山真秀啊，桂林的山真险啊”用了什么修辞？",
    "options": [
@@ -729,10 +756,11 @@
     "夸张"
    ],
    "answerIndex": 0,
-   "explanation": "三个结构相似的句子排列在一起"
+   "explanation": "三个结构相似的句子排列在一起",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-057",
+   "id": "c6-055",
    "subject": "语文",
    "stem": "“太阳的脸红起来了”用了什么修辞？",
    "options": [
@@ -742,10 +770,11 @@
     "反问"
    ],
    "answerIndex": 0,
-   "explanation": "把太阳当作人来写"
+   "explanation": "把太阳当作人来写",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-058",
+   "id": "c6-056",
    "subject": "语文",
    "stem": "“白发三千丈”用了什么修辞？",
    "options": [
@@ -755,10 +784,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "用“三千丈”夸大白发之长"
+   "explanation": "用“三千丈”夸大白发之长",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-059",
+   "id": "c6-057",
    "subject": "语文",
    "stem": "“恰似一江春水向东流”用了什么修辞？",
    "options": [
@@ -768,10 +798,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "把愁比作一江春水"
+   "explanation": "把愁比作一江春水",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-060",
+   "id": "c6-058",
    "subject": "语文",
    "stem": "“妹妹的脸像红苹果”用了什么修辞？",
    "options": [
@@ -781,10 +812,11 @@
     "设问"
    ],
    "answerIndex": 0,
-   "explanation": "把脸比作红苹果"
+   "explanation": "把脸比作红苹果",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-061",
+   "id": "c6-059",
    "subject": "语文",
    "stem": "“谁是最可爱的人？是我们的战士。”用了什么修辞？",
    "options": [
@@ -794,10 +826,11 @@
     "排比"
    ],
    "answerIndex": 0,
-   "explanation": "先提出问题，再自己回答"
+   "explanation": "先提出问题，再自己回答",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-062",
+   "id": "c6-060",
    "subject": "语文",
    "stem": "“在老师的帮助下，使我进步很大。”这句的毛病是？",
    "options": [
@@ -807,10 +840,11 @@
     "重复啰嗦"
    ],
    "answerIndex": 0,
-   "explanation": "“在……下”和“使”同时用，主语被吃掉"
+   "explanation": "“在……下”和“使”同时用，主语被吃掉",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-063",
+   "id": "c6-061",
    "subject": "语文",
    "stem": "“我们要养成认真完成作业。”这句的毛病是？",
    "options": [
@@ -820,10 +854,11 @@
     "语序不当"
    ],
    "answerIndex": 0,
-   "explanation": "“养成”后面缺少宾语“的习惯”"
+   "explanation": "“养成”后面缺少宾语“的习惯”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-064",
+   "id": "c6-062",
    "subject": "语文",
    "stem": "“他的写作水平明显改进了。”这句的毛病是？",
    "options": [
@@ -833,10 +868,11 @@
     "语序不当"
    ],
    "answerIndex": 0,
-   "explanation": "水平应搭配“提高”，不是“改进”"
+   "explanation": "水平应搭配“提高”，不是“改进”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-065",
+   "id": "c6-063",
    "subject": "语文",
    "stem": "“我估计他今天可能一定会来。”这句的毛病是？",
    "options": [
@@ -846,10 +882,11 @@
     "语序不当"
    ],
    "answerIndex": 0,
-   "explanation": "“估计”“可能”“一定”语意矛盾"
+   "explanation": "“估计”“可能”“一定”语意矛盾",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-066",
+   "id": "c6-064",
    "subject": "语文",
    "stem": "“我们要防止不再发生类似的事故。”这句的毛病是？",
    "options": [
@@ -859,10 +896,11 @@
     "重复啰嗦"
    ],
    "answerIndex": 0,
-   "explanation": "“防止”和“不再”双重否定，意思反了"
+   "explanation": "“防止”和“不再”双重否定，意思反了",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-067",
+   "id": "c6-065",
    "subject": "语文",
    "stem": "“他不但学习好，而且乐于助人。”这句有语病吗？",
    "options": [
@@ -872,10 +910,11 @@
     "重复啰嗦"
    ],
    "answerIndex": 0,
-   "explanation": "“不但……而且……”使用正确"
+   "explanation": "“不但……而且……”使用正确",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-068",
+   "id": "c6-066",
    "subject": "语文",
    "stem": "“我把作业认真地做完了。”这句有语病吗？",
    "options": [
@@ -885,10 +924,11 @@
     "搭配不当"
    ],
    "answerIndex": 0,
-   "explanation": "状语“认真地”位置正确"
+   "explanation": "状语“认真地”位置正确",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-069",
+   "id": "c6-067",
    "subject": "语文",
    "stem": "“同学们讨论并听取了校长的报告。”这句的毛病是？",
    "options": [
@@ -898,10 +938,11 @@
     "重复啰嗦"
    ],
    "answerIndex": 0,
-   "explanation": "应先“听取”再“讨论”"
+   "explanation": "应先“听取”再“讨论”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-070",
+   "id": "c6-068",
    "subject": "语文",
    "stem": "“这本书的内容和插图都很丰富。”这句的毛病是？",
    "options": [
@@ -911,10 +952,11 @@
     "重复啰嗦"
    ],
    "answerIndex": 0,
-   "explanation": "“插图”应搭配“精美”"
+   "explanation": "“插图”应搭配“精美”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-071",
+   "id": "c6-069",
    "subject": "语文",
    "stem": "“他大约花了将近一个小时才完成。”这句的毛病是？",
    "options": [
@@ -924,10 +966,11 @@
     "语序不当"
    ],
    "answerIndex": 0,
-   "explanation": "“大约”和“将近”重复"
+   "explanation": "“大约”和“将近”重复",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-072",
+   "id": "c6-070",
    "subject": "语文",
    "stem": "表示解释说明，常用什么标点？",
    "options": [
@@ -937,10 +980,11 @@
     "问号"
    ],
    "answerIndex": 0,
-   "explanation": "破折号可以表示解释说明"
+   "explanation": "破折号可以表示解释说明",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-073",
+   "id": "c6-071",
    "subject": "语文",
    "stem": "表示话未说完，常用什么标点？",
    "options": [
@@ -950,10 +994,11 @@
     "引号"
    ],
    "answerIndex": 0,
-   "explanation": "省略号可以表示话未说完"
+   "explanation": "省略号可以表示话未说完",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-074",
+   "id": "c6-072",
    "subject": "语文",
    "stem": "并列词语之间常用什么标点？",
    "options": [
@@ -963,10 +1008,11 @@
     "冒号"
    ],
    "answerIndex": 0,
-   "explanation": "并列词语之间用顿号"
+   "explanation": "并列词语之间用顿号",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-075",
+   "id": "c6-073",
    "subject": "语文",
    "stem": "总说与分说之间常用什么标点？",
    "options": [
@@ -976,10 +1022,11 @@
     "破折号"
    ],
    "answerIndex": 0,
-   "explanation": "冒号常用在总说之后引出分说"
+   "explanation": "冒号常用在总说之后引出分说",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-076",
+   "id": "c6-074",
    "subject": "语文",
    "stem": "引用别人的话常用什么标点？",
    "options": [
@@ -989,10 +1036,11 @@
     "破折号"
    ],
    "answerIndex": 0,
-   "explanation": "直接引用用引号"
+   "explanation": "直接引用用引号",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-077",
+   "id": "c6-075",
    "subject": "语文",
    "stem": "书名、篇名常用什么标点？",
    "options": [
@@ -1002,10 +1050,11 @@
     "破折号"
    ],
    "answerIndex": 0,
-   "explanation": "书名、篇名用书名号"
+   "explanation": "书名、篇名用书名号",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-078",
+   "id": "c6-076",
    "subject": "语文",
    "stem": "疑问句末尾常用什么标点？",
    "options": [
@@ -1015,10 +1064,11 @@
     "逗号"
    ],
    "answerIndex": 0,
-   "explanation": "疑问句末尾用问号"
+   "explanation": "疑问句末尾用问号",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-079",
+   "id": "c6-077",
    "subject": "语文",
    "stem": "感叹句末尾常用什么标点？",
    "options": [
@@ -1028,10 +1078,11 @@
     "分号"
    ],
    "answerIndex": 0,
-   "explanation": "感叹句末尾用叹号"
+   "explanation": "感叹句末尾用叹号",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-080",
+   "id": "c6-078",
    "subject": "语文",
    "stem": "“（ ）困难再大，我们（ ）要完成任务。”应填？",
    "options": [
@@ -1041,10 +1092,11 @@
     "不但……而且……"
    ],
    "answerIndex": 0,
-   "explanation": "前后是让步关系，用“即使……也……”"
+   "explanation": "前后是让步关系，用“即使……也……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-081",
+   "id": "c6-079",
    "subject": "语文",
    "stem": "“（ ）努力学习，（ ）能取得好成绩。”应填？",
    "options": [
@@ -1054,10 +1106,11 @@
     "不是……而是……"
    ],
    "answerIndex": 0,
-   "explanation": "必要条件关系，用“只有……才……”"
+   "explanation": "必要条件关系，用“只有……才……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-082",
+   "id": "c6-080",
    "subject": "语文",
    "stem": "“他（ ）学习好，（ ）乐于助人。”应填？",
    "options": [
@@ -1067,10 +1120,11 @@
     "只有……才……"
    ],
    "answerIndex": 0,
-   "explanation": "递进关系，用“不但……而且……”"
+   "explanation": "递进关系，用“不但……而且……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-083",
+   "id": "c6-081",
    "subject": "语文",
    "stem": "“（ ）明天下雨，我们（ ）不去公园。”应填？",
    "options": [
@@ -1080,10 +1134,11 @@
     "既然……就……"
    ],
    "answerIndex": 0,
-   "explanation": "假设关系，用“如果……就……”"
+   "explanation": "假设关系，用“如果……就……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-084",
+   "id": "c6-082",
    "subject": "语文",
    "stem": "“（ ）你已经答应了，（ ）应该做到。”应填？",
    "options": [
@@ -1093,10 +1148,11 @@
     "虽然……但是……"
    ],
    "answerIndex": 0,
-   "explanation": "因果关系，用“既然……就……”"
+   "explanation": "因果关系，用“既然……就……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-085",
+   "id": "c6-083",
    "subject": "语文",
    "stem": "“这本书（ ）我的，（ ）他的。”应填？",
    "options": [
@@ -1106,10 +1162,11 @@
     "即使……也……"
    ],
    "answerIndex": 0,
-   "explanation": "并列关系，用“不是……而是……”"
+   "explanation": "并列关系，用“不是……而是……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-086",
+   "id": "c6-084",
    "subject": "语文",
    "stem": "“（ ）天气很冷，（ ）他仍然坚持锻炼。”应填？",
    "options": [
@@ -1119,10 +1176,11 @@
     "如果……就……"
    ],
    "answerIndex": 0,
-   "explanation": "转折关系，用“虽然……但是……”"
+   "explanation": "转折关系，用“虽然……但是……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-087",
+   "id": "c6-085",
    "subject": "语文",
    "stem": "“（ ）多读多写，作文（ ）会进步。”应填？",
    "options": [
@@ -1132,49 +1190,11 @@
     "不是……而是……"
    ],
    "answerIndex": 0,
-   "explanation": "条件关系，用“只要……就……”"
+   "explanation": "条件关系，用“只要……就……”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-088",
-   "subject": "语文",
-   "stem": "“千锤万凿出深山，烈火焚烧若等闲。”写的是什么？",
-   "options": [
-    "石灰",
-    "竹子",
-    "梅花",
-    "菊花"
-   ],
-   "answerIndex": 0,
-   "explanation": "于谦《石灰吟》写石灰"
-  },
-  {
-   "id": "c6-089",
-   "subject": "语文",
-   "stem": "“千磨万击还坚劲，任尔东西南北风。”写的是什么？",
-   "options": [
-    "竹子",
-    "石灰",
-    "梅花",
-    "松树"
-   ],
-   "answerIndex": 0,
-   "explanation": "郑燮《竹石》写竹子"
-  },
-  {
-   "id": "c6-090",
-   "subject": "语文",
-   "stem": "“不要人夸好颜色，只留清气满乾坤。”写的是什么？",
-   "options": [
-    "梅花",
-    "竹子",
-    "菊花",
-    "荷花"
-   ],
-   "answerIndex": 0,
-   "explanation": "王冕《墨梅》写梅花"
-  },
-  {
-   "id": "c6-091",
+   "id": "c6-086",
    "subject": "语文",
    "stem": "“谁言寸草心，报得三春晖。”表达的是什么？",
    "options": [
@@ -1184,10 +1204,11 @@
     "思乡"
    ],
    "answerIndex": 0,
-   "explanation": "孟郊《游子吟》表达母爱"
+   "explanation": "孟郊《游子吟》表达母爱",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-092",
+   "id": "c6-087",
    "subject": "语文",
    "stem": "“海内存知己，天涯若比邻。”的作者是？",
    "options": [
@@ -1197,10 +1218,11 @@
     "苏轼"
    ],
    "answerIndex": 0,
-   "explanation": "王勃《送杜少府之任蜀州》"
+   "explanation": "王勃《送杜少府之任蜀州》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-093",
+   "id": "c6-088",
    "subject": "语文",
    "stem": "“但愿人长久，千里共婵娟。”的作者是？",
    "options": [
@@ -1210,10 +1232,11 @@
     "白居易"
    ],
    "answerIndex": 0,
-   "explanation": "苏轼《水调歌头》"
+   "explanation": "苏轼《水调歌头》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-094",
+   "id": "c6-089",
    "subject": "语文",
    "stem": "“会当凌绝顶，一览众山小。”的作者是？",
    "options": [
@@ -1223,10 +1246,11 @@
     "孟浩然"
    ],
    "answerIndex": 0,
-   "explanation": "杜甫《望岳》"
+   "explanation": "杜甫《望岳》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-095",
+   "id": "c6-090",
    "subject": "语文",
    "stem": "“长风破浪会有时，直挂云帆济沧海。”的作者是？",
    "options": [
@@ -1236,10 +1260,11 @@
     "陆游"
    ],
    "answerIndex": 0,
-   "explanation": "李白《行路难》"
+   "explanation": "李白《行路难》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-096",
+   "id": "c6-091",
    "subject": "语文",
    "stem": "“先天下之忧而忧，后天下之乐而乐。”出自？",
    "options": [
@@ -1249,10 +1274,11 @@
     "《陋室铭》"
    ],
    "answerIndex": 0,
-   "explanation": "范仲淹《岳阳楼记》"
+   "explanation": "范仲淹《岳阳楼记》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-097",
+   "id": "c6-092",
    "subject": "语文",
    "stem": "“落红不是无情物，化作春泥更护花。”的作者是？",
    "options": [
@@ -1262,10 +1288,11 @@
     "陆游"
    ],
    "answerIndex": 0,
-   "explanation": "龚自珍《己亥杂诗》"
+   "explanation": "龚自珍《己亥杂诗》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-098",
+   "id": "c6-093",
    "subject": "语文",
    "stem": "“山重水复疑无路，柳暗花明又一村。”的作者是？",
    "options": [
@@ -1275,10 +1302,11 @@
     "辛弃疾"
    ],
    "answerIndex": 0,
-   "explanation": "陆游《游山西村》"
+   "explanation": "陆游《游山西村》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-099",
+   "id": "c6-094",
    "subject": "语文",
    "stem": "“人生自古谁无死，留取丹心照汗青。”的作者是？",
    "options": [
@@ -1288,10 +1316,11 @@
     "陆游"
    ],
    "answerIndex": 0,
-   "explanation": "文天祥《过零丁洋》"
+   "explanation": "文天祥《过零丁洋》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-100",
+   "id": "c6-095",
    "subject": "语文",
    "stem": "“王师北定中原日，家祭无忘告乃翁。”的作者是？",
    "options": [
@@ -1301,10 +1330,11 @@
     "苏轼"
    ],
    "answerIndex": 0,
-   "explanation": "陆游《示儿》"
+   "explanation": "陆游《示儿》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-101",
+   "id": "c6-096",
    "subject": "语文",
    "stem": "“生当作人杰，死亦为鬼雄。”的作者是？",
    "options": [
@@ -1314,10 +1344,11 @@
     "柳永"
    ],
    "answerIndex": 0,
-   "explanation": "李清照《夏日绝句》"
+   "explanation": "李清照《夏日绝句》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-102",
+   "id": "c6-097",
    "subject": "语文",
    "stem": "“随风潜入夜，润物细无声。”写的是什么？",
    "options": [
@@ -1327,10 +1358,11 @@
     "冬雪"
    ],
    "answerIndex": 0,
-   "explanation": "杜甫《春夜喜雨》写春雨"
+   "explanation": "杜甫《春夜喜雨》写春雨",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-103",
+   "id": "c6-098",
    "subject": "语文",
    "stem": "《西游记》中孙悟空的兵器是？",
    "options": [
@@ -1340,10 +1372,11 @@
     "方天画戟"
    ],
    "answerIndex": 0,
-   "explanation": "如意金箍棒"
+   "explanation": "如意金箍棒",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-104",
+   "id": "c6-099",
    "subject": "语文",
    "stem": "《水浒传》中梁山好汉共有多少位？",
    "options": [
@@ -1353,49 +1386,11 @@
     "36 位"
    ],
    "answerIndex": 0,
-   "explanation": "一百单八将"
+   "explanation": "一百单八将",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-105",
-   "subject": "语文",
-   "stem": "《童年》的作者是？",
-   "options": [
-    "高尔基",
-    "列夫·托尔斯泰",
-    "安徒生",
-    "笛福"
-   ],
-   "answerIndex": 0,
-   "explanation": "高尔基自传体小说《童年》"
-  },
-  {
-   "id": "c6-106",
-   "subject": "语文",
-   "stem": "《鲁滨逊漂流记》的作者是？",
-   "options": [
-    "笛福",
-    "马克·吐温",
-    "高尔基",
-    "安徒生"
-   ],
-   "answerIndex": 0,
-   "explanation": "英国作家笛福"
-  },
-  {
-   "id": "c6-107",
-   "subject": "语文",
-   "stem": "《汤姆·索亚历险记》的作者是？",
-   "options": [
-    "马克·吐温",
-    "笛福",
-    "高尔基",
-    "安徒生"
-   ],
-   "answerIndex": 0,
-   "explanation": "美国作家马克·吐温"
-  },
-  {
-   "id": "c6-108",
+   "id": "c6-100",
    "subject": "语文",
    "stem": "安徒生是哪个国家的童话作家？",
    "options": [
@@ -1405,10 +1400,11 @@
     "德国"
    ],
    "answerIndex": 0,
-   "explanation": "安徒生是丹麦童话作家"
+   "explanation": "安徒生是丹麦童话作家",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-109",
+   "id": "c6-101",
    "subject": "语文",
    "stem": "鲁迅的原名是？",
    "options": [
@@ -1418,23 +1414,11 @@
     "胡适"
    ],
    "answerIndex": 0,
-   "explanation": "鲁迅原名周树人"
+   "explanation": "鲁迅原名周树人",
+   "unit": "第八单元"
   },
   {
-   "id": "c6-110",
-   "subject": "语文",
-   "stem": "《朝花夕拾》是鲁迅的什么集？",
-   "options": [
-    "散文集",
-    "小说集",
-    "诗集",
-    "杂文集"
-   ],
-   "answerIndex": 0,
-   "explanation": "《朝花夕拾》是散文集"
-  },
-  {
-   "id": "c6-111",
+   "id": "c6-102",
    "subject": "语文",
    "stem": "“横眉冷对千夫指，俯首甘为孺子牛。”的作者是？",
    "options": [
@@ -1444,10 +1428,11 @@
     "巴金"
    ],
    "answerIndex": 0,
-   "explanation": "鲁迅《自嘲》"
+   "explanation": "鲁迅《自嘲》",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-112",
+   "id": "c6-103",
    "subject": "语文",
    "stem": "《穷人》的作者是？",
    "options": [
@@ -1457,10 +1442,11 @@
     "马克·吐温"
    ],
    "answerIndex": 0,
-   "explanation": "俄国作家列夫·托尔斯泰"
+   "explanation": "俄国作家列夫·托尔斯泰",
+   "unit": "第四单元"
   },
   {
-   "id": "c6-113",
+   "id": "c6-104",
    "subject": "语文",
    "stem": "一（ ）军舰，括号里用什么量词？",
    "options": [
@@ -1470,10 +1456,11 @@
     "幅"
    ],
    "answerIndex": 0,
-   "explanation": "军舰用“艘”"
+   "explanation": "军舰用“艘”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-114",
+   "id": "c6-105",
    "subject": "语文",
    "stem": "一（ ）画，括号里用什么量词？",
    "options": [
@@ -1483,10 +1470,11 @@
     "棵"
    ],
    "answerIndex": 0,
-   "explanation": "画用“幅”"
+   "explanation": "画用“幅”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-115",
+   "id": "c6-106",
    "subject": "语文",
    "stem": "一（ ）桥，括号里用什么量词？",
    "options": [
@@ -1496,10 +1484,11 @@
     "个"
    ],
    "answerIndex": 0,
-   "explanation": "桥用“座”"
+   "explanation": "桥用“座”",
+   "unit": "第四单元"
   },
   {
-   "id": "c6-116",
+   "id": "c6-107",
    "subject": "语文",
    "stem": "一（ ）明月，括号里用什么量词？",
    "options": [
@@ -1509,10 +1498,11 @@
     "片"
    ],
    "answerIndex": 0,
-   "explanation": "明月用“轮”"
+   "explanation": "明月用“轮”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-117",
+   "id": "c6-108",
    "subject": "语文",
    "stem": "“休”字表示什么意思？",
    "options": [
@@ -1522,10 +1512,11 @@
     "手在劳动"
    ],
    "answerIndex": 0,
-   "explanation": "左边是人，右边是木"
+   "explanation": "左边是人，右边是木",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-118",
+   "id": "c6-109",
    "subject": "语文",
    "stem": "下面哪个字是形声字？",
    "options": [
@@ -1535,10 +1526,11 @@
     "森"
    ],
    "answerIndex": 0,
-   "explanation": "“河”由形旁“氵”和声旁“可”组成"
+   "explanation": "“河”由形旁“氵”和声旁“可”组成",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-119",
+   "id": "c6-110",
    "subject": "语文",
    "stem": "“木”字加一笔可以变成哪个字？",
    "options": [
@@ -1548,10 +1540,11 @@
     "休"
    ],
    "answerIndex": 0,
-   "explanation": "木下加一横就是“本”"
+   "explanation": "木下加一横就是“本”",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-120",
+   "id": "c6-111",
    "subject": "语文",
    "stem": "“凸”字有几笔？",
    "options": [
@@ -1561,10 +1554,11 @@
     "7 笔"
    ],
    "answerIndex": 0,
-   "explanation": "凸是 5 笔"
+   "explanation": "凸是 5 笔",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-121",
+   "id": "c6-112",
    "subject": "语文",
    "stem": "“凹”字有几笔？",
    "options": [
@@ -1574,10 +1568,11 @@
     "7 笔"
    ],
    "answerIndex": 0,
-   "explanation": "凹是 5 笔"
+   "explanation": "凹是 5 笔",
+   "unit": "基础知识"
   },
   {
-   "id": "c6-122",
+   "id": "c6-113",
    "subject": "语文",
    "stem": "下面哪个词表示“看”的意思？",
    "options": [
@@ -1587,7 +1582,442 @@
     "触摸"
    ],
    "answerIndex": 0,
-   "explanation": "凝视是集中精力地看"
+   "explanation": "凝视是集中精力地看",
+   "unit": "基础知识"
+  },
+  {
+   "id": "c6-114",
+   "subject": "语文",
+   "stem": "《草原》的作者是？",
+   "options": [
+    "老舍",
+    "巴金",
+    "鲁迅",
+    "朱自清"
+   ],
+   "answerIndex": 0,
+   "explanation": "老舍先生写的《草原》",
+   "unit": "第一单元"
+  },
+  {
+   "id": "c6-115",
+   "subject": "语文",
+   "stem": "《丁香结》的作者是？",
+   "options": [
+    "宗璞",
+    "冰心",
+    "丁玲",
+    "杨绛"
+   ],
+   "answerIndex": 0,
+   "explanation": "宗璞的散文《丁香结》",
+   "unit": "第一单元"
+  },
+  {
+   "id": "c6-116",
+   "subject": "语文",
+   "stem": "《宿建德江》的作者是？",
+   "options": [
+    "孟浩然",
+    "李白",
+    "杜甫",
+    "王维"
+   ],
+   "answerIndex": 0,
+   "explanation": "孟浩然《宿建德江》",
+   "unit": "第一单元"
+  },
+  {
+   "id": "c6-117",
+   "subject": "语文",
+   "stem": "“黑云翻墨未遮山”的作者是？",
+   "options": [
+    "苏轼",
+    "辛弃疾",
+    "陆游",
+    "王安石"
+   ],
+   "answerIndex": 0,
+   "explanation": "苏轼《六月二十七日望湖楼醉书》",
+   "unit": "第一单元"
+  },
+  {
+   "id": "c6-118",
+   "subject": "语文",
+   "stem": "“稻花香里说丰年”的作者是？",
+   "options": [
+    "辛弃疾",
+    "苏轼",
+    "李清照",
+    "岳飞"
+   ],
+   "answerIndex": 0,
+   "explanation": "辛弃疾《西江月·夜行黄沙道中》",
+   "unit": "第一单元"
+  },
+  {
+   "id": "c6-119",
+   "subject": "语文",
+   "stem": "《七律·长征》的作者是？",
+   "options": [
+    "毛泽东",
+    "周恩来",
+    "朱德",
+    "陈毅"
+   ],
+   "answerIndex": 0,
+   "explanation": "毛泽东写的《七律·长征》",
+   "unit": "第二单元"
+  },
+  {
+   "id": "c6-120",
+   "subject": "语文",
+   "stem": "《狼牙山五壮士》中五位壮士最后？",
+   "options": [
+    "跳下悬崖",
+    "投降敌人",
+    "被俘",
+    "渡过大河"
+   ],
+   "answerIndex": 0,
+   "explanation": "五位壮士英勇跳崖",
+   "unit": "第二单元"
+  },
+  {
+   "id": "c6-121",
+   "subject": "语文",
+   "stem": "《开国大典》写的是哪一天？",
+   "options": [
+    "1949年10月1日",
+    "1949年7月1日",
+    "1921年7月1日",
+    "1945年8月15日"
+   ],
+   "answerIndex": 0,
+   "explanation": "中华人民共和国成立的日子",
+   "unit": "第二单元"
+  },
+  {
+   "id": "c6-122",
+   "subject": "语文",
+   "stem": "《我的战友邱少云》中邱少云牺牲在？",
+   "options": [
+    "抗美援朝战场",
+    "长征路上",
+    "抗日战争",
+    "解放战争"
+   ],
+   "answerIndex": 0,
+   "explanation": "抗美援朝战争中",
+   "unit": "第二单元"
+  },
+  {
+   "id": "c6-123",
+   "subject": "语文",
+   "stem": "《竹节人》主要写了什么？",
+   "options": [
+    "童年玩竹节人的乐趣",
+    "故宫的建筑",
+    "宇宙生命",
+    "红军长征"
+   ],
+   "answerIndex": 0,
+   "explanation": "范锡林写的童年玩具",
+   "unit": "第三单元"
+  },
+  {
+   "id": "c6-124",
+   "subject": "语文",
+   "stem": "《宇宙生命之谜》主要探讨？",
+   "options": [
+    "地球之外是否有生命",
+    "故宫的历史",
+    "草原的景色",
+    "鲁迅的童年"
+   ],
+   "answerIndex": 0,
+   "explanation": "探索宇宙生命",
+   "unit": "第三单元"
+  },
+  {
+   "id": "c6-125",
+   "subject": "语文",
+   "stem": "《故宫博物院》按什么顺序介绍故宫？",
+   "options": [
+    "空间顺序",
+    "时间顺序",
+    "事情发展顺序",
+    "逻辑顺序"
+   ],
+   "answerIndex": 0,
+   "explanation": "按中轴线由南到北",
+   "unit": "第三单元"
+  },
+  {
+   "id": "c6-126",
+   "subject": "语文",
+   "stem": "《桥》中的老支书在洪水来临时？",
+   "options": [
+    "组织村民过桥，最后牺牲",
+    "第一个逃走",
+    "躲在家里",
+    "去城里求救"
+   ],
+   "answerIndex": 0,
+   "explanation": "老支书舍己为人",
+   "unit": "第四单元"
+  },
+  {
+   "id": "c6-127",
+   "subject": "语文",
+   "stem": "《金色的鱼钩》中老班长用鱼钩？",
+   "options": [
+    "钓鱼给伤员吃",
+    "做玩具",
+    "换钱",
+    "当武器"
+   ],
+   "answerIndex": 0,
+   "explanation": "老班长钓鱼给伤病员，自己吃草根",
+   "unit": "第四单元"
+  },
+  {
+   "id": "c6-128",
+   "subject": "语文",
+   "stem": "《灯光》中郝副营长牺牲是为了？",
+   "options": [
+    "让孩子们能在灯光下学习",
+    "保住自己的生命",
+    "寻找食物",
+    "掩护战友撤退"
+   ],
+   "answerIndex": 0,
+   "explanation": "为了让后代过上好日子",
+   "unit": "第五单元"
+  },
+  {
+   "id": "c6-129",
+   "subject": "语文",
+   "stem": "《盼》的作者是？",
+   "options": [
+    "铁凝",
+    "宗璞",
+    "老舍",
+    "冰心"
+   ],
+   "answerIndex": 0,
+   "explanation": "铁凝的《盼》",
+   "unit": "第五单元"
+  },
+  {
+   "id": "c6-130",
+   "subject": "语文",
+   "stem": "《只有一个地球》说明地球？",
+   "options": [
+    "美丽但渺小，资源有限",
+    "无边无际",
+    "可以随便破坏",
+    "没有生命"
+   ],
+   "answerIndex": 0,
+   "explanation": "呼吁保护地球",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-131",
+   "subject": "语文",
+   "stem": "《青山不老》中的老人主要在做什么？",
+   "options": [
+    "植树造林",
+    "修路",
+    "种地",
+    "放牧"
+   ],
+   "answerIndex": 0,
+   "explanation": "晋西北老人十五年植树",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-132",
+   "subject": "语文",
+   "stem": "《三黑和土地》表达什么？",
+   "options": [
+    "农民对土地的热爱",
+    "对城市的向往",
+    "对战争的厌恶",
+    "对学习的渴望"
+   ],
+   "answerIndex": 0,
+   "explanation": "三黑对土地的深情",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-133",
+   "subject": "语文",
+   "stem": "“九曲黄河万里沙”的作者是？",
+   "options": [
+    "刘禹锡",
+    "杜牧",
+    "王安石",
+    "苏轼"
+   ],
+   "answerIndex": 0,
+   "explanation": "刘禹锡《浪淘沙》",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-134",
+   "subject": "语文",
+   "stem": "“千里莺啼绿映红”的作者是？",
+   "options": [
+    "杜牧",
+    "刘禹锡",
+    "王安石",
+    "辛弃疾"
+   ],
+   "answerIndex": 0,
+   "explanation": "杜牧《江南春》",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-135",
+   "subject": "语文",
+   "stem": "“一水护田将绿绕”的作者是？",
+   "options": [
+    "王安石",
+    "杜牧",
+    "刘禹锡",
+    "苏轼"
+   ],
+   "answerIndex": 0,
+   "explanation": "王安石《书湖阴先生壁》",
+   "unit": "第六单元"
+  },
+  {
+   "id": "c6-136",
+   "subject": "语文",
+   "stem": "《两小儿辩日》中孔子面对争论？",
+   "options": [
+    "不能决断",
+    "偏向第一个",
+    "偏向第二个",
+    "大声斥责"
+   ],
+   "answerIndex": 0,
+   "explanation": "孔子实事求是，不能决",
+   "unit": "第七单元"
+  },
+  {
+   "id": "c6-137",
+   "subject": "语文",
+   "stem": "《曹冲称象》中曹冲用什么办法称象？",
+   "options": [
+    "用石头代替大象",
+    "用秤直接称",
+    "把象杀死",
+    "用船装水"
+   ],
+   "answerIndex": 0,
+   "explanation": "等量替换",
+   "unit": "第七单元"
+  },
+  {
+   "id": "c6-138",
+   "subject": "语文",
+   "stem": "《表里的生物》中的“我”认为表里有什么？",
+   "options": [
+    "生物",
+    "宝石",
+    "地图",
+    "机器"
+   ],
+   "answerIndex": 0,
+   "explanation": "童年好奇心",
+   "unit": "第七单元"
+  },
+  {
+   "id": "c6-139",
+   "subject": "语文",
+   "stem": "《他们那时候多有趣啊》是一篇？",
+   "options": [
+    "科幻小说",
+    "童话",
+    "说明文",
+    "诗歌"
+   ],
+   "answerIndex": 0,
+   "explanation": "阿西莫夫的科幻小说",
+   "unit": "第七单元"
+  },
+  {
+   "id": "c6-140",
+   "subject": "语文",
+   "stem": "《少年闰土》的作者是？",
+   "options": [
+    "鲁迅",
+    "老舍",
+    "巴金",
+    "茅盾"
+   ],
+   "answerIndex": 0,
+   "explanation": "鲁迅《故乡》",
+   "unit": "第八单元"
+  },
+  {
+   "id": "c6-141",
+   "subject": "语文",
+   "stem": "《少年闰土》中闰土讲的趣事有？",
+   "options": [
+    "看瓜刺猹、雪地捕鸟",
+    "读书写字",
+    "放牛割草",
+    "赶集卖菜"
+   ],
+   "answerIndex": 0,
+   "explanation": "闰土讲看瓜、捕鸟等新鲜事",
+   "unit": "第八单元"
+  },
+  {
+   "id": "c6-142",
+   "subject": "语文",
+   "stem": "《好的故事》的作者是？",
+   "options": [
+    "鲁迅",
+    "老舍",
+    "巴金",
+    "沈从文"
+   ],
+   "answerIndex": 0,
+   "explanation": "鲁迅《野草》",
+   "unit": "第八单元"
+  },
+  {
+   "id": "c6-143",
+   "subject": "语文",
+   "stem": "《我的伯父鲁迅先生》的作者是？",
+   "options": [
+    "周晔",
+    "鲁迅",
+    "臧克家",
+    "巴金"
+   ],
+   "answerIndex": 0,
+   "explanation": "鲁迅的侄女周晔",
+   "unit": "第八单元"
+  },
+  {
+   "id": "c6-144",
+   "subject": "语文",
+   "stem": "《有的人》是为纪念谁写的？",
+   "options": [
+    "鲁迅",
+    "毛泽东",
+    "雷锋",
+    "老舍"
+   ],
+   "answerIndex": 0,
+   "explanation": "臧克家纪念鲁迅",
+   "unit": "第八单元"
   }
  ]
 }

@@ -163,17 +163,17 @@ public final class Prefs {
         return new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA).format(new Date());
     }
 
-    // ---------- 混合科目的抽题权重（默认 语文:数学:英语 = 2:2:1） ----------
+    // ---------- 混合科目的抽题权重（默认 语文:数学:英语 = 1:3:1） ----------
     /**
      * 混合模式每题独立抽科，没有“5 题一袋”的状态，进程被杀也不会重置比例。
      * 权重现在存在 Prefs 里是为了后续加设置页时不用再改存储结构；本次不开放 UI。
      * 返回副本，调用方不要修改。
      */
     public int[] mixedWeights() {
-        int c = clamp(sp.getInt("mixedWeightChinese", 2), 0, 100);
-        int m = clamp(sp.getInt("mixedWeightMath", 2), 0, 100);
+        int c = clamp(sp.getInt("mixedWeightChinese", 1), 0, 100);
+        int m = clamp(sp.getInt("mixedWeightMath", 3), 0, 100);
         int e = clamp(sp.getInt("mixedWeightEnglish", 1), 0, 100);
-        if (c + m + e <= 0) return new int[]{2, 2, 1};
+        if (c + m + e <= 0) return new int[]{1, 3, 1};
         return new int[]{c, m, e};
     }
 
@@ -183,8 +183,8 @@ public final class Prefs {
         m = clamp(m, 0, 100);
         e = clamp(e, 0, 100);
         if (c + m + e <= 0) {
-            c = 2;
-            m = 2;
+            c = 1;
+            m = 3;
             e = 1;
         }
         sp.edit()

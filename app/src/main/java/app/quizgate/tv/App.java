@@ -68,5 +68,8 @@ public class App extends Application {
 
         // 进程每次起来都重新落地桌面 alias 状态：更新/重启后不会把隐藏状态弄丢或弄反。
         LauncherIcon.apply(this, new Prefs(this));
+
+        // 如果本包是 Device Owner，每次进程启动都重新确认限制（普通安装是 no-op）。
+        DeviceOwner.apply(this);
     }
 }
