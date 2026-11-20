@@ -88,7 +88,7 @@ python3 tools/gen_quiz.py
 
 ### 每日答题时段（仅 Android 11，ADR-12）
 
-`Prefs.scheduleEnabled() / windowStartMin() / windowEndMin()` 保存一个每日时段（30 分钟精度，默认 16:30–22:00）。`Schedules` 负责当天尽力自动开始、22:00 硬结束；`ScheduleReceiver` 接当天精确闹钟；`NotifProbe` 在亮屏时补开始；`GateService.onStartCommand/ticker` 拒绝时段外启动并硬结束。不做跨天持久化：只有当天应用/通知监听/开机/亮屏时才会安排；屏幕黑着不点亮、不挂窗。`Schedules.supported()` 在 API 31+ 返回 false，设置页显示“仅 Android 11”，未新增权限。已在 MiTV-MFTR0 / Android 11 实测（D15）；屏幕熄灭后的 pending 路径和 Android 12+ 未验收。
+`Prefs.scheduleEnabled() / windowStartMin() / windowEndMin()` 保存一个每日时段（30 分钟精度，默认 16:30–23:00）。`Schedules` 负责当天尽力自动开始、23:00 硬结束；`ScheduleReceiver` 接当天精确闹钟；`NotifProbe` 在亮屏时补开始；`GateService.onStartCommand/ticker` 拒绝时段外启动并硬结束。不做跨天持久化：只有当天应用/通知监听/开机/亮屏时才会安排；屏幕黑着不点亮、不挂窗。`Schedules.supported()` 在 API 31+ 返回 false，设置页显示“仅 Android 11”，未新增权限。已在 MiTV-MFTR0 / Android 11 实测（D15）；屏幕熄灭后的 pending 路径和 Android 12+ 未验收。
 
 桌面入口是 `LauncherAlias`（`activity-alias`）；`LauncherIcon.apply()` 只在 `launcherHidden && scheduleEnabled && Schedules.supported()` 时禁用 alias，`App.onCreate` 每次进程启动重新落地。关闭答题时段会清 `launcherHidden` 并恢复 alias；家长入口是遮罩菜单键 + 口令。系统设置 → 应用仍可见，不防卸载。alias 隐藏/恢复已用 debug prefs 验证（D16），UI 开关与遮罩入口待真人操作验收。
 
@@ -101,6 +101,14 @@ python3 tools/gen_quiz.py
 - 刻意不加 `FLAG_KEEP_SCREEN_ON`：实测会把待机中的电视点亮
 
 `GateService.reconcile(phase)` 是窗口增删的唯一入口，不要用事件直接 `addView`/`removeView`。锁定态由 `keepMaskOnTop()` 在被 HOME/切应用顶掉后重新挂窗口抢焦点（HOME 键在系统层被处理，普通应用无法拦截或吞掉）。
+
+### 答题时暂停媒体
+
+`GateService.showMask()` 首次挂遮罩前调用 `MediaPauser.pause()`：优先用通知使用权
+`getActiveSessions(NotifProbe)` 暂停 PLAYING/BUFFERING 的 MediaSession；没有活动会话时
+申请短暂音频焦点并兜底发 `KEYCODE_MEDIA_PAUSE`，`removeMask()` 时释放焦点。
+无媒体时 no-op，不新增权限。Bilibili TV（`com.xiaodianshi.tv.yst`）没有 MediaSession，
+依赖音频焦点/兜底键；已在 MiTV-MFTR0 实测通过（D18）：遮罩期间暂停，移除后恢复。
 
 ### 服务存活
 

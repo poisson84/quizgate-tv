@@ -38,8 +38,8 @@ public class GateService extends Service implements MaskView.Host {
     private static final String CHANNEL = "gate";
     private static final int NOTIF_ID = 1001;
     private static final long TICK_MS = 200L;
-    private static final long MINI_THRESHOLD_MS = 30_000L;
-    /** 点「开始计时」后右下角亮 5 秒，告诉家长这次设了多久；之后仍按原逻辑只在最后 30 秒出现。 */
+    private static final long MINI_THRESHOLD_MS = 5_000L;
+    /** 点「开始计时」后右下角亮 5 秒，告诉家长这次设了多久；之后仍按原逻辑只在最后 5 秒出现。 */
     private static final long START_HINT_MS = 5_000L;
     /**
      * 服务活过这么久才算「稳定」，崩溃计数归零。
@@ -229,7 +229,7 @@ public class GateService extends Service implements MaskView.Host {
     private final Runnable ticker = new Runnable() {
         @Override public void run() {
             if (!running) return;
-            // 每日时段硬结束：到 22:00 一律解锁，遮罩/读秒立即撤掉。
+            // 每日时段硬结束：到时段结束（默认 23:00）一律解锁，遮罩/读秒立即撤掉。
             if (prefs.scheduleEnabled() && Schedules.supported()
                     && prefs.phase() != Prefs.IDLE
                     && !Schedules.inWindow(prefs, System.currentTimeMillis())) {
@@ -480,6 +480,8 @@ public class GateService extends Service implements MaskView.Host {
             return;
         }
         pendingMask = false;
+        // 答题期间暂停正在播放的媒体；只暂停，不自动恢复。
+        MediaPauser.pause(this);
         mask = new MaskView(this, prefs, bank, this);
         focusLostCount = 0;     // 新窗口要先给系统一帧时间拿焦点，别立刻判成「被切走」
         try {
@@ -492,6 +494,7 @@ public class GateService extends Service implements MaskView.Host {
     }
 
     private void removeMask() {
+        MediaPauser.release(this);
         if (mask == null) return;
         try { wm.removeViewImmediate(mask); } catch (Throwable ignore) { }
         mask = null;

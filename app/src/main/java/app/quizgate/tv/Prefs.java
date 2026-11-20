@@ -92,7 +92,7 @@ public final class Prefs {
 
     // ---------- 每日答题时段（只在 Android 11 / API < 31 验证） ----------
     public static final int DEFAULT_WINDOW_START_MIN = 16 * 60 + 30; // 16:30
-    public static final int DEFAULT_WINDOW_END_MIN = 22 * 60;       // 22:00
+    public static final int DEFAULT_WINDOW_END_MIN = 23 * 60;       // 23:00
 
     public boolean scheduleEnabled() { return sp.getBoolean("scheduleEnabled", false); }
 

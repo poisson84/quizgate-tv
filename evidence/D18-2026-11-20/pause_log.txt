@@ -1,0 +1,9 @@
+ 13534.541 16702 16702 I QuizGate: mini_show remaining=0:10 caption=剩余
+ 13544.248 16702 16702 I QuizGate: media_focus request=1
+ 13544.256 16702 16702 I QuizGate: media_pause dispatch key
+ 13544.382 16702 16702 I QuizGate: mask_add ok
+ 13552.150 16702 16702 I QuizGate: media_focus release
+ 13552.173 16702 16702 I QuizGate: mask_remove
+
+11-20 22:15:50:581 player piid:423 state:paused
+11-20 22:15:58:445 player piid:423 state:started
