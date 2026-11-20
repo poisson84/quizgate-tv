@@ -65,7 +65,8 @@
 > 冷却和连对进度都会落盘，按电源键强停后由通知监听复活也会继续；冷却期间菜单键仍可呼出家长口令。
 > 已在 Android 11 实机验证，Android 14 待验证。
 >
-> **题库（未发布）**：六年级每科 100+ 题（数学 124 / 语文 144 / 英语 210），全库 670 题。
+> **题库（未发布）**：六年级每科 100+ 题（数学 151 / 语文 174 / 英语 235），全库 752 题。
+> 覆盖表见 [docs/coverage-grade6.md](docs/coverage-grade6.md)。
 > 数学按北师大版（2024 新教材）六上 9 个单元；语文按统编版六上课文目录；英语按
 > 人教 PEP（2024 新教材）六上 6 个单元（Amazing places / Getting together / Healthy life /
 > Managing money well / Exploring space / Energy, nature and us）。数学不含圆柱、圆锥、

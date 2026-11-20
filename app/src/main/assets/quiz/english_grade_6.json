@@ -2942,6 +2942,356 @@
    "answerIndex": 0,
    "explanation": "money 指钱",
    "unit": "Unit 4 Managing money well"
+  },
+  {
+   "id": "e6-211",
+   "subject": "英语",
+   "stem": "I went to the Great Wall ___ bus.",
+   "options": [
+    "by",
+    "on",
+    "in",
+    "at"
+   ],
+   "answerIndex": 0,
+   "explanation": "by bus 表示乘公共汽车",
+   "unit": "Unit 1 Amazing places"
+  },
+  {
+   "id": "e6-212",
+   "subject": "英语",
+   "stem": "How was your trip?",
+   "options": [
+    "It was great.",
+    "I'm fine.",
+    "It's Monday.",
+    "By train."
+   ],
+   "answerIndex": 0,
+   "explanation": "问旅行怎么样",
+   "unit": "Unit 1 Amazing places"
+  },
+  {
+   "id": "e6-213",
+   "subject": "英语",
+   "stem": "I ___ the Palace Museum last week.",
+   "options": [
+    "visited",
+    "visit",
+    "visits",
+    "visiting"
+   ],
+   "answerIndex": 0,
+   "explanation": "last week 用过去式",
+   "unit": "Unit 1 Amazing places"
+  },
+  {
+   "id": "e6-214",
+   "subject": "英语",
+   "stem": "When is Spring Festival?",
+   "options": [
+    "It's in January or February.",
+    "It's Monday.",
+    "I'm fine.",
+    "By bus."
+   ],
+   "answerIndex": 0,
+   "explanation": "春节通常在一月或二月",
+   "unit": "Unit 2 Getting together"
+  },
+  {
+   "id": "e6-215",
+   "subject": "英语",
+   "stem": "What do you do at the Spring Festival?",
+   "options": [
+    "We have a big dinner.",
+    "I'm twelve.",
+    "It's sunny.",
+    "By bike."
+   ],
+   "answerIndex": 0,
+   "explanation": "春节吃团圆饭",
+   "unit": "Unit 2 Getting together"
+  },
+  {
+   "id": "e6-216",
+   "subject": "英语",
+   "stem": "“Mid-Autumn Festival”是什么意思？",
+   "options": [
+    "中秋节",
+    "春节",
+    "端午节",
+    "元宵节"
+   ],
+   "answerIndex": 0,
+   "explanation": "Mid-Autumn Festival 是中秋节",
+   "unit": "Unit 2 Getting together"
+  },
+  {
+   "id": "e6-217",
+   "subject": "英语",
+   "stem": "How often do you exercise?",
+   "options": [
+    "Twice a week.",
+    "I'm fine.",
+    "It's Monday.",
+    "By bus."
+   ],
+   "answerIndex": 0,
+   "explanation": "How often 问频率",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-218",
+   "subject": "英语",
+   "stem": "You should ___ to bed early.",
+   "options": [
+    "go",
+    "goes",
+    "going",
+    "went"
+   ],
+   "answerIndex": 0,
+   "explanation": "should 后接动词原形",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-219",
+   "subject": "英语",
+   "stem": "To keep healthy, we should eat more ___.",
+   "options": [
+    "vegetables",
+    "candy",
+    "junk food",
+    "ice cream"
+   ],
+   "answerIndex": 0,
+   "explanation": "多吃蔬菜有益健康",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-220",
+   "subject": "英语",
+   "stem": "How much is the book?",
+   "options": [
+    "It's 20 yuan.",
+    "I'm fine.",
+    "It's Monday.",
+    "By bus."
+   ],
+   "answerIndex": 0,
+   "explanation": "How much 问价格",
+   "unit": "Unit 4 Managing money well"
+  },
+  {
+   "id": "e6-221",
+   "subject": "英语",
+   "stem": "I'm going to ___ my pocket money.",
+   "options": [
+    "save",
+    "saves",
+    "saving",
+    "saved"
+   ],
+   "answerIndex": 0,
+   "explanation": "be going to 后接动词原形",
+   "unit": "Unit 4 Managing money well"
+  },
+  {
+   "id": "e6-222",
+   "subject": "英语",
+   "stem": "I'm going to spend my money ___ books.",
+   "options": [
+    "on",
+    "in",
+    "at",
+    "for"
+   ],
+   "answerIndex": 0,
+   "explanation": "spend money on sth.",
+   "unit": "Unit 4 Managing money well"
+  },
+  {
+   "id": "e6-223",
+   "subject": "英语",
+   "stem": "The Moon ___ around the Earth.",
+   "options": [
+    "goes",
+    "go",
+    "went",
+    "going"
+   ],
+   "answerIndex": 0,
+   "explanation": "客观事实用一般现在时",
+   "unit": "Unit 5 Exploring space"
+  },
+  {
+   "id": "e6-224",
+   "subject": "英语",
+   "stem": "How many planets are there in the solar system?",
+   "options": [
+    "Eight.",
+    "Five.",
+    "Ten.",
+    "Two."
+   ],
+   "answerIndex": 0,
+   "explanation": "太阳系有八大行星",
+   "unit": "Unit 5 Exploring space"
+  },
+  {
+   "id": "e6-225",
+   "subject": "英语",
+   "stem": "“solar system”是什么意思？",
+   "options": [
+    "太阳系",
+    "银河系",
+    "地球",
+    "月球"
+   ],
+   "answerIndex": 0,
+   "explanation": "solar system 是太阳系",
+   "unit": "Unit 5 Exploring space"
+  },
+  {
+   "id": "e6-226",
+   "subject": "英语",
+   "stem": "We should ___ water.",
+   "options": [
+    "save",
+    "saves",
+    "saving",
+    "saved"
+   ],
+   "answerIndex": 0,
+   "explanation": "should 后接动词原形",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-227",
+   "subject": "英语",
+   "stem": "Why should we protect the environment?",
+   "options": [
+    "Because we live on Earth.",
+    "I'm fine.",
+    "It's Monday.",
+    "By bus."
+   ],
+   "answerIndex": 0,
+   "explanation": "保护环境因为我们住在地球上",
+   "unit": "Unit 6 Energy, nature and us"
+  },
+  {
+   "id": "e6-228",
+   "subject": "英语",
+   "stem": "We shouldn't ___ water.",
+   "options": [
+    "waste",
+    "save",
+    "recycle",
+    "protect"
+   ],
+   "answerIndex": 0,
+   "explanation": "waste 表示浪费",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-229",
+   "subject": "英语",
+   "stem": "“protect”是什么意思？",
+   "options": [
+    "保护",
+    "污染",
+    "回收",
+    "浪费"
+   ],
+   "answerIndex": 0,
+   "explanation": "protect 表示保护",
+   "unit": "Unit 6 Energy, nature and us"
+  },
+  {
+   "id": "e6-230",
+   "subject": "英语",
+   "stem": "A travel scrapbook usually includes ___.",
+   "options": [
+    "photos and notes about a trip",
+    "only math exercises",
+    "a shopping list",
+    "a weather report"
+   ],
+   "answerIndex": 0,
+   "explanation": "旅行剪贴簿记录旅行照片和见闻",
+   "unit": "Unit 1 Amazing places"
+  },
+  {
+   "id": "e6-231",
+   "subject": "英语",
+   "stem": "When you present photos from a school event, you should ___.",
+   "options": [
+    "describe what happened",
+    "say nothing",
+    "only show the photos",
+    "read a math book"
+   ],
+   "answerIndex": 0,
+   "explanation": "照片展示要说明活动内容",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-232",
+   "subject": "英语",
+   "stem": "A healthy life guide should include ___.",
+   "options": [
+    "healthy food and exercise",
+    "only games",
+    "only money",
+    "only music"
+   ],
+   "answerIndex": 0,
+   "explanation": "健康指南包括饮食和运动",
+   "unit": "Unit 3 Healthy life"
+  },
+  {
+   "id": "e6-233",
+   "subject": "英语",
+   "stem": "A monthly budget plan helps you ___.",
+   "options": [
+    "plan how to spend and save money",
+    "eat more candy",
+    "sleep late",
+    "watch more TV"
+   ],
+   "answerIndex": 0,
+   "explanation": "预算计划帮助合理安排支出和储蓄",
+   "unit": "Unit 4 Managing money well"
+  },
+  {
+   "id": "e6-234",
+   "subject": "英语",
+   "stem": "A planet card should include the planet's ___.",
+   "options": [
+    "name and facts",
+    "price",
+    "color of shoes",
+    "favorite food"
+   ],
+   "answerIndex": 0,
+   "explanation": "星球卡片写名称和特点",
+   "unit": "Unit 5 Exploring space"
+  },
+  {
+   "id": "e6-235",
+   "subject": "英语",
+   "stem": "An environmental proposal asks people to ___.",
+   "options": [
+    "save energy and protect nature",
+    "waste water",
+    "cut down trees",
+    "use more plastic"
+   ],
+   "answerIndex": 0,
+   "explanation": "环保倡议书呼吁节约能源、保护自然",
+   "unit": "Unit 6 Energy, nature and us"
   }
  ]
 }

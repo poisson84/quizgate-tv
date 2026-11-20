@@ -139,7 +139,7 @@ Recovery 双清也无法由应用层解决。详见 `docs/device-owner.md`。
 
 `QuizBank.next(subjectKey, grade, floor, r)` 按科目加载 `assets/quiz/<subject>_grade_<n>.json`，抽不到题时向低年级回退，但不突破 `floor`（初中 7–9 年级不会退到小学题）。数学最终兜底 `Core.arithmetic()`；语文/英语兜底到该科目最低年级，再不行给一道通用常识题。判题用 `answerIndex`，选项打乱后回写下标，不比较选项文本。
 
-六年级题库按教材目录收口：数学按北师大版（2024 新教材）六上 9 个单元（分数除法、圆、用字母表示（二）、分数的应用、比的认识含比例的认识、确定位置、百分数、观察物体（二）、数据的表示和分析（三）），不含圆柱/圆锥/解比例/比例尺/比例的应用/正比例/反比例；语文按统编版六上课文目录（《草原》《丁香结》《七律·长征》《桥》《穷人》《少年闰土》《有的人》等），不含六下课文（石灰吟/竹石/墨梅/学弈）和外国文学名著；英语按人教 PEP（2024 新教材）六上 6 个单元（Amazing places、Getting together、Healthy life、Managing money well、Exploring space、Energy, nature and us），含 be going to，不含 will 一般将来时、现在完成时、过去进行时、条件句。`tools/gen_quiz.py` 的 `FORBIDDEN_G6` 会在这些内容回流时让生成失败。当前六年级 124/144/210（数学/语文/英语），全库 670 题。
+六年级题库按教材目录收口：数学按北师大版（2024 新教材）六上 9 个单元（分数除法、圆、用字母表示（二）、分数的应用、比的认识含比例的认识、确定位置、百分数、观察物体（二）、数据的表示和分析（三）），不含圆柱/圆锥/解比例/比例尺/比例的应用/正比例/反比例；语文按统编版六上课文目录（《草原》《丁香结》《七律·长征》《桥》《穷人》《少年闰土》《有的人》等），不含六下课文（石灰吟/竹石/墨梅/学弈）和外国文学名著；英语按人教 PEP（2024 新教材）六上 6 个单元（Amazing places、Getting together、Healthy life、Managing money well、Exploring space、Energy, nature and us），含 be going to，不含 will 一般将来时、现在完成时、过去进行时、条件句。`tools/gen_quiz.py` 的 `FORBIDDEN_G6` 会在这些内容回流时让生成失败。当前六年级 151/174/235（数学/语文/英语），全库 752 题；覆盖口径与缺口见 `docs/coverage-grade6.md`。
 
 答对一题不会立刻延时：`MaskView` 要求连对 `Prefs.requiredCorrect()` 题（默认 2，设置页「连对题数」可调 1–10）。答错清零连对进度，按本次锁定内累计错题数冷却 5/10/20/30 秒；冷却和连对进度落在 `Prefs`，按电源键强停后仍继续。规则与取舍见 `docs/architecture.md` ADR-10。
 
